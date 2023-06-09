@@ -1,0 +1,138 @@
+/*start general rules*/
+/*end general rules*/
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css);
+body{
+  background-color: rgba(245, 224, 160, 0.368);
+}
+body{
+  background-color: rgba(245, 224, 160, 0.368);
+  
+}
+.partie{
+ font-family: 'Amatic SC', cursive; 
+ font-size: 15px; 
+ font-weight: 600;
+}
+.text-center{
+ font-family: 'Great Vibes', cursive; 
+ font-size: 50px;
+}
+
+/*start  navbar*/
+#logo_span{
+  color: #ffc107;
+}
+.bi.bi-search{
+  margin: 9px;
+}
+/*profile*/
+.dropdown-menu {
+  --bs-dropdown-zindex: 1000;
+  --bs-dropdown-min-width: 10rem;
+  --bs-dropdown-padding-x: 0;
+  --bs-dropdown-padding-y: 0.5rem;
+  --bs-dropdown-spacer: 0.125rem;
+  --bs-dropdown-font-size: 1rem;
+  --bs-dropdown-link-color: #000000;
+  --bs-dropdown-bg: #e0a903;}
+.btn-secondary {
+      --bs-btn-color: #000;
+      --bs-btn-bg: #e0a903;
+      --bs-btn-border-color: #040404;}
+
+
+/*end navbar*/
+
+/*start recette*/
+
+
+.card-title{
+  color: #ffc107;
+  font-style: italic;
+}
+
+.card{
+  width:   90%;
+  margin: 10px;
+}
+
+/*end recette*/
+
+/*start rating stars*/
+.ratings-wrapper{
+  display: inline-block;
+  margin-bottom: 5px;
+}
+.ratings{
+  display: flex;
+}
+.ratings span{
+  cursor: pointer;
+  transition: color .2s;
+  font-size: 20px;
+}
+.ratings span:hover{
+  color: orange;
+}
+.ratings span:hover ~ span{
+  color: orange;
+}
+.ratings span[data-clicked]{
+  color: orange;
+}
+.ratings span[data-clicked] ~ span{
+  color: orange;
+}
+/*end rating stars*/
+#row_id{
+   
+  box-shadow: 20px 15px 35px #ffc107;
+  border-radius: 2%;
+}
+/* rating stars*/
+.rating{
+	border: none;
+	float: left;
+}
+
+.rating > input{
+	display: none;
+}
+
+.rating > label:before{
+	content: '\f005';
+	font-family: FontAwesome;
+	margin: 0.5px;
+	font-size: 1.2rem;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.rating > .half:before{
+	content: '\f089';
+	position: absolute;
+	cursor: pointer;
+}
+
+
+.rating > label{
+	color: #ddd;
+	float: right;
+	cursor: pointer;
+}
+
+.rating > input:checked ~ label,
+.rating:not(:checked) > label:hover, 
+.rating:not(:checked) > label:hover ~ label{
+	color: #ffc107;
+}
+
+
+.rating > input:checked + label:hover,
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label,
+.rating > input:checked ~ label:hover ~ label{
+	color: #ffc107;
+}
+
+  

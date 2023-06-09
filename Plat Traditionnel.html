@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font Awesome -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"rel="stylesheet">
+  <!--lien pour utuliser bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <!--lien pour acceder au fichier CSS-->
+  <link rel="stylesheet" href="../login/assets/css/plat.css">
+  <!--titre de la page web-->
+  <title>MRF</title>
+</head>
+<body>
+  <!--navclass-->
+  <nav class="navbar navbar-default navbar-expand-lg bg-body-tertiary py-6 fixed-top">
+    <div class="container">
+      <!--logo-->
+      <a class="navbar-brand"  href="#">
+        <img src="../login/assets/images/logojdid.png.png" alt="LOGO " width="45" height="39" >
+        Morrocan F<span id="logo_span">oo</span>d
+      </a>
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse justify-content-end collapse" id="navbarSupportedContent" style="">
+        <ul class="navbar-nav me-5 mb-2 mb-lg-0">
+          <!--home-->
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Acceuille</a>
+          </li>
+          <!--plat-->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle px-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Plat
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Entrée</a></li>
+              <li><a class="dropdown-item" href="#">Desser</a></li>
+              <li><a class="dropdown-item" href="#">Plat traditionnel</a></li>
+            </ul>
+          </li>
+          <!--espace-->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle px-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Espace Utilisateur
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Vos recette</a></li>
+              <li><a class="dropdown-item" href="#">Vos commentaires</a></li>
+             
+            </ul>
+        </li>
+      </ul>
+        <!--recherche-->
+        <form class="d-flex">
+          <input class="form-control mr-2" id="search" type="search" placeholder="Search" aria-label="Search">
+          <i class="bi bi-search"></i>
+          <div class="dropdown">
+            <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="../login/assets/images/userr.jfif" alt="" width="32" height="32" class="rounded-circle me-2" >
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark text-small shadow" style="">
+              <li><a class="dropdown-item" href="#">votre Profile</a></li>
+              <li><a class="dropdown-item" href="#">Paramètres</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">Se déconnecter</a></li>
+            </ul>
+          </div>
+        </div> 
+        </form>
+      </div>
+
+    </div>
+  </nav>
+  <!--end nav class-->
+
+
+ 
+
+  <!--partie historique des plats marocains-->
+  <section class="partie py-5">
+    <div class="container">
+        <h1 class="text-center text-dark mb-4 mt-5"><span class="text-warning"> Plat traditionnels</span></h1>
+        <div class="col">
+            <div class="row gx-0">
+             <!--partie couscous-->
+             <div class="card" id="row_id" >
+                <div class="row ">
+                  <!--image-->
+                    <div class="col-md-4">
+                        <img src="../login/assets/images/ma9adir.jpg" class="card-img-top"  alt="...">
+                        <img src="../login/assets/images/cocote.jpg" class="card-img-top"  alt="...">
+                        <img src="../login/assets/images/persile.webp" class="card-img-top"  alt="...">
+                        <img src="../login/assets/images/mer9a.jpg" class="card-img-top"  alt="...">
+                        <img src="../login/assets/images/khudra.jpg" class="card-img-top"  alt="...">
+                        <img src="../login/assets/images/finay.jpg" class="card-img-top"  alt="...">
+                        <img src="../login/assets/images/tefwar.jpg" class="card-img-top"  alt="...">
+                        <img src="../login/assets/images/tghrbil.png" class="card-img-top"  alt="...">
+                        <img src="../login/assets/images/couscous.jpg" class="card-img-top"  alt="...">
+                        <img src="../login/assets/images/couscous-3.jpg" class="card-img-top"  alt="...">
+                        
+                    </div>
+                    <!--contenu-->
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <div class="col">
+                              <!--titre-->
+                                <div class="row">
+                                    <h3 class="text-center text-dark mb-4"><span class="text-warning">Couscous Marocain</span></h3>
+                                </div>
+                                <!--information generale-->
+                                <div class="row">
+                                    <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                        <span class="material-icons-sharp text-warning">
+                                            alarm
+                                            </span>
+                                            30 min
+                                    </div>
+                                    <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                        <span class="material-icons-sharp text-warning">
+                                            signal_cellular_alt
+                                            </span>
+                                            facile
+                                    </div>
+                                    <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                        <span class="material-icons-sharp text-warning">
+                                          local_fire_department
+                                            </span>
+                                            45 min
+                                    </div>
+                                    <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                        <span class="material-icons-sharp text-warning">
+                                            person
+                                            </span>
+                                            6
+                                    </div>
+                                    <!--start rating star-->
+                                    <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                      <fieldset class="rating">
+                                        <input type="radio" id="star5" name="rating" value="5"/><label for="star5" class="full" title="Awesome"></label>
+                                        <input type="radio" id="star4.5" name="rating" value="4.5"/><label for="star4.5" class="half"></label>
+                                        <input type="radio" id="star4" name="rating" value="4"/><label for="star4" class="full"></label>
+                                        <input type="radio" id="star3.5" name="rating" value="3.5"/><label for="star3.5" class="half"></label>
+                                        <input type="radio" id="star3" name="rating" value="3"/><label for="star3" class="full"></label>
+                                        <input type="radio" id="star2.5" name="rating" value="2.5"/><label for="star2.5" class="half"></label>
+                                        <input type="radio" id="star2" name="rating" value="2"/><label for="star2" class="full"></label>
+                                        <input type="radio" id="star1.5" name="rating" value="1.5"/><label for="star1.5" class="half"></label>
+                                        <input type="radio" id="star1" name="rating" value="1"/><label for="star1" class="full"></label>
+                                        <input type="radio" id="star0.5" name="rating" value="0.5"/><label for="star0.5" class="half"></label>
+                                      </fieldset>
+                                      <p id="rating-value1"></p>
+                                    </div>
+                                    <!--end rating star-->
+                                </div>
+                                <!--ingredient / preparation-->
+                                <div class="row">
+                                  <div class="col-md-12">
+                                    <div class="border p-4">
+                                        <h4 class="text-warning">Ingrédients</h4>
+                                        <ul class="pl-3">
+                                          
+                                            <h3 class="text-success">Pour le bouillon :</h3>
+                                              <li>1.5 kg d'épaule de mouton</li>
+                                              <li>1.5 oignons blancs</li>
+                                              <li>1 petit bouquet de persil plat</li>
+                                              <li>Un grand verre de pois chiche secs</li>
+                                              <h3 class="text-success">Épices :</h3>
+                                              <li>1 cuillère à café pleine de Rass el Hanout</li>
+                                              <li>1 cuillère à café de poivre noir</li>
+                                              <li>1 cuillère à café de gingembre</li>
+                                              <li>0.5 cuillère à café de pistils de safran</li>
+                                              <li>1 cuillère à café de gingembre moulu</li>
+                                              <li>un cube de bouillon type Knorr</li>
+                                              <li>un piment très doux type petit poivron vert appelé "poivron piquant"</li>
+                                              <h3 class="text-success">Légumes :</h3>
+                                              <li>3.5 grosses carottes</li>
+                                              <li>1.5 courgettes</li>
+                                              <li>3.5 navets</li>
+                                              <li>1.5 pommes de terre ou patate douces</li>
+                                              <li>1 morceau de potiron, des fèves.</li>
+                                              <li>si  vous voulez varier : du chou blanc, du poivron, aubergine (attention ça colore la sauce)</li>
+                                              <li>1 à 2 tomates</li>
+                                              <li>Environ 4 L d'eau</li>
+                                              <h3 class="text-success">Pour la semoule à couscous :</h3>
+                                              <li>1 kg de couscous moyen</li>
+                                              <li>1.5 à 4 cuillères à soupe d'huile d'olive</li>
+                                              <li>0.5 verre d'eau à température ambiante</li>
+                                              <li>Sel</li>
+                                              <li>Smen (beurre rance spécial)</li>
+
+                                        </ul>
+                                          
+                                        
+                                        <h4 class="text-warning">Préparation</h4>
+                                        <ol>
+                                            <li>  Couscous à la Marocaine par étapes et quelques astucesPréparation du bouillon :
+                                                
+                                                Mettre l'huile dans la marmite à couscoussier, faire chauffer puis ajouter la viande coupée en gros morceaux.
+                                                Incorporer les deux oignons coupés en grosses lamelles, le bouquet de persil, les épices et mélanger. Faire saisir quelques instants, il faut que la viande colore légèrement mais pas trop, contrairement au tajine.
+                                            </li>
+                                            
+                                            <li>
+                                              les pois-chiche et le poivron piquant.
+                                              Astuce : tremper les pois- chiche la veille dans de l'eau du robinet tiède environ une nuit. Le lendemain égoutter puis mettre dans un grand sac et le place au congélateur jusqu'au moment voulu.
+                                              Mélanger, puis arroser d'eau en couvrant généreusement toute la viande. Couvrir et laisser cuire le temps de préparer les légumes et la semoule.
+                                            </li>
+                                            
+                                            <li>
+                                              Pendant ce temps, nettoyer et éplucher les légumes, les couper en gros morceaux.
+                                              Par exemple : 
+                                              <br>
+                                               la carotte et la courgette une fois dans le sens de la largeur puis une fois dans le sens de la longueur. La pomme de terre et le navet en quatre dans le sens de la longueur, laisser les fèves ainsi, tailler le potiron en moyen morceaux, couper le chou en gros quartiers .
+                                            </li>
+                                            
+                                            <li>
+                                             Dès que la viande est à moitié fondante et se détache de l'os. Ajouter le navet et la carotte, comptez 15 minutes puis ajouter le reste de légumes, compter un temps de cuisson de 15 minutes. <br>
+                                              Le potiron est cuit à part dans une casserole avec une louche de bouillon et une louche d'eau. <br>
+                                              Goûter et rectifier l'assaisonnement.
+                                            </li>
+                                           
+                                            <li>
+                                             
+                                             
+                                              Dans un très grand saladier, mettre le couscous, le sel et un bon filet d'huile d'olive.
+                                              <br>
+                                              Mélanger au doigts (et non à la main entière) pour enduire les graines. Arroser de peu d'eau petit à petit tout en mélangent. <br>
+                                              On hydrate ainsi le couscous, sans cela il serait sec et ne cuirait pas. <br>
+                                              Les graines se détachent, roulent et ont un effet mouillé. <br>
+                                              Placer ensuite la semoule à couscous dans le haut du couscoussier réchauffé au préalable sur le bouillon. <br>
+                                              Luter les deux parties du couscoussier à l'aide d'un joint ou à défaut à l'aide d'un sachet en plastique roulé ou un torchon. <br>
+                                              Vous pouvez soit couvrir le couscous soit le laisser ainsi.
+                                            </li>
+                                            
+                                            <li>
+                                             Après quelques minutes de cuisson (15 minutes environ), retirer le couscous et placer dans un grand plat. <br>
+                                            Astuce : arroser votre couscous d'une petite louchette de bouillon et mélanger, il va ainsi s'imprégner de toutes les saveurs.
+                                            </li>
+                                            
+                                            <li>
+                                           Pour le dressage : <br>
+                                            Mettre en dôme le coucous dans un grand plat creux. Faire un puits au centre. Arroser tout le couscous de bouillon, compter environ 3 bonnes louches. <br>
+                                            Placer la viande au centre, décorer de légumes de manière homogène : une carotte, une courgette, une pomme de terre... Terminer par le potiron et les pois-chiches. Arroser de nouveau de bouillon. Disposer le reste de bouillon dans un bol pour se servir à table. <br>
+                                            Servir aussitôt, très chaud. Déguster avec de la Harissa, du lait fermenté ou caillé. <br>
+                                            Il se peut que l'on vous serve le couscous avec des raisins frais ou de la pastéque coupée, ça permet de rafraîchir le palais car le couscous se déguste très chaud.
+
+                                            </li>
+                                        </ol>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>   
+                        </div>   
+                    </div>
+                </div>
+                <!--fin contenu-->
+            </div>
+             <!--end partie couscous-->
+            </div>
+
+
+            
+            <div class="row gx-0">
+             <!--partie rfissa-->
+              <div class="card" id="row_id" >
+                <div class="row ">
+                  <!--image-->
+                    <div class="col-md-4">
+                      <img src="../login/assets/images/cooking-rfissa-with-amine-bousksou-on-camping-aourir-023.webp" class="card-img-top" alt="">
+                      <img src="../login/assets/images/pattemsemen.jpg" class="card-img-top" alt="">
+                      <img src="../login/assets/images/5 Preparation Rfissa.jpg" class="card-img-top" alt="">
+                      <img src="../login/assets/images/Malwi-pour-rfissa-scaled-scaled.jpg" class="card-img-top" alt="">
+                      <img src="../login/assets/images/ob_693da6_jkih.jpg" class="card-img-top" alt="">
+                    </div>
+                    <!--contenu-->
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <div class="col">
+                              <!--titre-->
+                                <div class="row">
+                                    <h3 class="text-center text-dark mb-4"><span class="text-warning">Rfissa au poulet</span></h3>
+                                </div>
+                                <!--information generale-->
+                                <div class="row">
+                                    <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                        <span class="material-icons-sharp text-warning">
+                                            alarm
+                                            </span>
+                                            1h30min
+                                    </div>
+                                    <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                      <span class="material-icons-sharp text-warning">
+                                        local_fire_department
+                                        </span>
+                                         45 min
+                                    </div>
+                                    <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                        <span class="material-icons-sharp text-warning">
+                                            signal_cellular_alt
+                                            </span>
+                                            moyenne
+                                    </div>
+                                    <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                        <span class="material-icons-sharp text-warning">
+                                            person
+                                            </span>
+                                            4
+                                    </div>
+                                    <!--start rating star-->
+                                    <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                      <fieldset class="rating">
+                                        <input type="radio" id="star5" name="rating" value="5"/><label for="star5" class="full" title="Awesome"></label>
+                                        <input type="radio" id="star4.5" name="rating" value="4.5"/><label for="star4.5" class="half"></label>
+                                        <input type="radio" id="star4" name="rating" value="4"/><label for="star4" class="full"></label>
+                                        <input type="radio" id="star3.5" name="rating" value="3.5"/><label for="star3.5" class="half"></label>
+                                        <input type="radio" id="star3" name="rating" value="3"/><label for="star3" class="full"></label>
+                                        <input type="radio" id="star2.5" name="rating" value="2.5"/><label for="star2.5" class="half"></label>
+                                        <input type="radio" id="star2" name="rating" value="2"/><label for="star2" class="full"></label>
+                                        <input type="radio" id="star1.5" name="rating" value="1.5"/><label for="star1.5" class="half"></label>
+                                        <input type="radio" id="star1" name="rating" value="1"/><label for="star1" class="full"></label>
+                                        <input type="radio" id="star0.5" name="rating" value="0.5"/><label for="star0.5" class="half"></label>
+                                      </fieldset>
+                                      <p id="rating-value1"></p>
+                                    </div>
+                                    <!--end rating star-->
+                                </div>
+                                <!--ingredient / preparation-->
+                                <div class="row">
+                                  <div class="col-md-12">
+                                    <div class="border p-4">
+                                        <h4 class="text-warning">Ingrédients</h4>
+                                        <ul class="pl-3">
+
+                                            <li>1 poulet de 1kg 200</li>
+                                            <li>2 gros oignons émincés</li>
+                                            <li>10 pistils de safran</li>
+                                            <li>1 c. à thé de beurre rance "Smen"</li>
+                                            <li>1 c. à thé de curcuma</li>
+                                            <li>1 c. à thé bombée de gingembre</li>
+                                            <li>1/2 c. à thé de poivre noir et blanc mélangés</li>
+                                            <li>1 petit bouquet de persil et de coriandre</li>
+                                            <li>1 c. à thé de sel</li>
+                                            <li>4 c. à soupe d'huile</li>
+                                            <li>1 l d'eau</li>
+                                            <li>100 g de lentilles</li>
+                                            <h3 class="text-success">Pour la pâte:</h3>
+                                            <li>500 g de farine</li>
+                                            <li>1 c. à café de sel</li>
+                                            <li>200 g de semoule fine</li>
+                                            <li>L’eau suffisante pour ramasser et pétrir la pâte</li>
+                                            <li>Un peu d’huile et de semoule fine pour façonner et cuire les trids</li>
+                                        </ul>
+                                        <h4 class="text-warning">Préparation</h4>
+                                        <ol>
+                                            <li>
+                                              Dans une marmite sur feu moyen, déposer l'oignon, le poulet, les épices, le beurre rance, le bouquet d'herbes, l'huile et l'eau. A ébullition baisser le feu et laisser cuire à couvert pendant 30 mn. Récupérer une louche de sauce et la laisser de côté pour les lentilles. Continuer la cuisson jusqu'à ce que le poulet devienne tendre.
+                                            </li>
+                                            <li>
+                                              Parfumer le poulet et sa sauce avec 1 c. à café de beurre rance "Smen" et retirer du feu.
+                                            </li>
+                                            <li>
+                                              Placer les lentilles dans une petite marmite et les couvrir à hauteur d'eau, les cuire à couvert jusqu'à évaporation du liquide. Saler et incorporer la louche de sauce réservée aux lentilles. Couvrir et les laisser mijoter 10 mn avant de les retirer du feu.
+                                            </li>
+                                            <li>
+                                              Pour servir : placer la pâte à Rfissa dans un couscoussier et la réchauffer à la vapeur. La disposer dans un plat de service, la napper de sauce à l'oignon et la garnir de poulet et de lentilles. Servir le plat très chaud.
+                                            </li>
+
+                                        </ol>
+                                      </div>
+                                  </div>     
+                                </div>
+                            </div>   
+                        </div>   
+                    </div>
+                </div>
+                <!--fin contenu-->
+            </div>
+             <!--end partie rfissa-->
+            </div> 
+            
+            
+            <div class="row gx-0">
+             <!--partie bastila poulet-->
+              <div class="card" id="row_id">
+                <div class="row ">
+                  <!--image-->
+                    <div class="col-md-4">
+                      <img src="../login/assets/images/pastilla-au-poulet-9-967x1024.jpg" class="card-img-top" alt="">
+                      <img src="../login/assets/images/30044816.jpg" class="card-img-top" alt="">
+                      <img src="../login/assets/images/pastilla-poulet-etape-11-480.jpg" class="card-img-top" alt="">
+                      <img src="../login/assets/images/servir.jpg" class="card-img-top" alt="">
+                      <img src="../login/assets/images/pastillaaupoulet.jpg" class="card-img-top" alt="">
+                    </div>
+                    <!--contenu-->
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <div class="col">
+                              <!--titre-->
+                                <div class="row">
+                                    <h3 class="text-center text-dark mb-4"><span class="text-warning">Bastila au poulet</span></h3>
+                                </div>
+                                <!--information generale-->
+                                <div class="row">
+                                    <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                        <span class="material-icons-sharp text-warning">
+                                            alarm
+                                            </span>
+                                            30 min
+                                    </div>
+                                    <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                      <span class="material-icons-sharp text-warning">
+                                        local_fire_department
+                                        </span>
+                                        1h5min
+                                    </div>
+                                    <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                        <span class="material-icons-sharp text-warning">
+                                            signal_cellular_alt
+                                            </span>
+                                            facile
+                                    </div>
+                                    <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                        <span class="material-icons-sharp text-warning">
+                                            person
+                                            </span>
+                                            6
+                                    </div>
+                                    <!--start rating star-->
+                                    <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                      <fieldset class="rating">
+                                        <input type="radio" id="star5" name="rating" value="5"/><label for="star5" class="full" title="Awesome"></label>
+                                        <input type="radio" id="star4.5" name="rating" value="4.5"/><label for="star4.5" class="half"></label>
+                                        <input type="radio" id="star4" name="rating" value="4"/><label for="star4" class="full"></label>
+                                        <input type="radio" id="star3.5" name="rating" value="3.5"/><label for="star3.5" class="half"></label>
+                                        <input type="radio" id="star3" name="rating" value="3"/><label for="star3" class="full"></label>
+                                        <input type="radio" id="star2.5" name="rating" value="2.5"/><label for="star2.5" class="half"></label>
+                                        <input type="radio" id="star2" name="rating" value="2"/><label for="star2" class="full"></label>
+                                        <input type="radio" id="star1.5" name="rating" value="1.5"/><label for="star1.5" class="half"></label>
+                                        <input type="radio" id="star1" name="rating" value="1"/><label for="star1" class="full"></label>
+                                        <input type="radio" id="star0.5" name="rating" value="0.5"/><label for="star0.5" class="half"></label>
+                                      </fieldset>
+                                      <p id="rating-value1"></p>
+                                    </div>
+                                    <!--end rating star-->
+                                </div>
+                                <!--ingredient / preparation-->
+                                <div class="row">
+                                  <div class="col-md-12">
+                                    <div class="border p-4">
+                                        <h4 class="text-warning">Ingrédients</h4>
+                                        <ul class="pl-3">
+                                            <li>1 poulet de 1.5kg</li>
+                                            <li>150 g de beurre</li>
+                                            <li>1/2 cuillère à café de gingembre en poudre</li>
+                                            <li>1 gros bouquet de coriandre</li>
+                                            <li>1 bouquet de persil plat</li>
+                                            <li>1 cuillère à soupe de cannelle en poudre</li>
+                                            <li>200g de sucre semoule</li>
+                                            <li>10 oeufs</li>
+                                            <li>1 paquet de feuilles de pastilla</li>
+                                            <li>250 g d'amandes mondées grillées concassées grossièrement</li>
+                                            <li>sel</li>
+                                            <li>poivre</li>
+                                        </ul>
+                                        <h4 class="text-warning">Préparation</h4>
+                                        <ol>
+                                            <li>
+                                              Épluchez et émincez les oignons. Découpez le poulet en morceaux. Dans une marmite faites suer les oignons avec 50g de beurre.                                        </li>
+                                            <li>
+                                              Ajoutez le poulet, le gingembre, cannelle en poudre, sel, poivre. Versez 50 cl d'eau. Faite cuire entre 30 et 40 minutes.</li>
+                                            <li>
+                                              Ajoutez la coriandre et le persil ciselés, faites cuire 10 minutes. Retirez le poulet et désossez-les. Faites réduire la sauce environ pendant 15 minutes. cassez 8 oeufs, battez-les et versez-les dans la sauce. </li>
+                                            <li>
+                                              Torréfiez les amandes, concassez-les. faites fondre le restant de beurre. Beurrez la plaque. Posez dessus un cercle. Couvrez-le d'une feuille de pastilla. Disposez 4 autres feuilles en rosaces en les faisant se chevaucher. Enduisez de beurre fondu.
+                                            </li>
+                                            <li>
+                                              Étalez sur la feuille centrale les morceaux de poulets. Ajoutez les oeufs cuits dans la sauce, puis les amandes. Saupoudrez avec le sucre semoule restant.
+                                            </li>
+                                            <li>
+                                              Cassez les 2 oeufs restants et réservez les jaunes. recouvrez les feuilles de pastilla avec 2 feuilles. Rabattez sur celles-ci les parties débordantes. Enduisez les de jaunes d'oeufs.
+                                            </li>
+                                            <li>
+                                              Placez une dernière feuille de pastilla, collez le dessus d'oeufs battus. faites cuire au four à 180° environ 10 minutes.
+                                            </li>
+                                            <li>
+                                              Arrosez la pastilla de beurre. Attendre qu'elle refroidisse très légèrement et saupoudrez la de sucre glace et de cannelle. Posez les amandes concassées et la menthe.
+                                            </li>
+                                        </ol>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>   
+                        </div>   
+                    </div>
+                </div>
+                <!--fin contenu-->
+              </div>
+             <!--end partie bastila poulet-->
+            </div> 
+            <div class="row gx-0">
+              <!--partie seffa medfouna-->
+               <div class="card" id="row_id">
+                 <div class="row ">
+                   <!--image-->
+                     <div class="col-md-4">
+                       <img src="../login/assets/images/ingredients-recette-marocaine-seffa.webp" class="card-img-top" alt="">
+                       <img src="../login/assets/images/recette-seffa-melange-viande.webp" class="card-img-top" alt="">
+                       <img src="../login/assets/images/seffa-medfouna-cheveux-d-anges-au-poulet.640x480.jpg" class="card-img-top" alt="">
+                       <img src="../login/assets/images/ob_0b2074_verseffam4.jpg" class="card-img-top" alt="">
+                       <img src="../login/assets/images/ob_6bf8f3_verseffam7.jpg" class="card-img-top" alt="">
+                       <img src="../login/assets/images/seffa-el-medfouna.png" class="card-img-top" alt="">
+                     </div>
+                     <!--contenu-->
+                     <div class="col-md-8">
+                         <div class="card-body">
+                             <div class="col">
+                               <!--titre-->
+                                 <div class="row">
+                                     <h3 class="text-center text-dark mb-4"><span class="text-warning">Seffa el medfouna</span></h3>
+                                 </div>
+                                 <!--information generale-->
+                                 <div class="row">
+                                     <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                         <span class="material-icons-sharp text-warning">
+                                             alarm
+                                             </span>
+                                             30 min
+                                     </div>
+                                     <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                       <span class="material-icons-sharp text-warning">
+                                         local_fire_department
+                                         </span>
+                                         1h 
+                                     </div>
+                                     <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                         <span class="material-icons-sharp text-warning">
+                                             signal_cellular_alt
+                                             </span>
+                                             facile
+                                     </div>
+                                     <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                         <span class="material-icons-sharp text-warning">
+                                             person
+                                             </span>
+                                             6
+                                     </div>
+                                     <!--start rating star-->
+                                     <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                      <fieldset class="rating">
+                                        <input type="radio" id="star5" name="rating" value="5"/><label for="star5" class="full" title="Awesome"></label>
+                                        <input type="radio" id="star4.5" name="rating" value="4.5"/><label for="star4.5" class="half"></label>
+                                        <input type="radio" id="star4" name="rating" value="4"/><label for="star4" class="full"></label>
+                                        <input type="radio" id="star3.5" name="rating" value="3.5"/><label for="star3.5" class="half"></label>
+                                        <input type="radio" id="star3" name="rating" value="3"/><label for="star3" class="full"></label>
+                                        <input type="radio" id="star2.5" name="rating" value="2.5"/><label for="star2.5" class="half"></label>
+                                        <input type="radio" id="star2" name="rating" value="2"/><label for="star2" class="full"></label>
+                                        <input type="radio" id="star1.5" name="rating" value="1.5"/><label for="star1.5" class="half"></label>
+                                        <input type="radio" id="star1" name="rating" value="1"/><label for="star1" class="full"></label>
+                                        <input type="radio" id="star0.5" name="rating" value="0.5"/><label for="star0.5" class="half"></label>
+                                      </fieldset>
+                                      <p id="rating-value1"></p>
+                                    </div>
+                                     <!--end rating star-->
+                                 </div>
+                                 <!--ingredient / preparation-->
+                                 <div class="row">
+                                   <div class="col-md-12">
+                                     <div class="border p-4">
+                                         <h4 class="text-warning">Ingrédients</h4>
+                                         <ul class="pl-3">
+                                             <li>1kg Poulet en entier en morceaux</li>
+                                             <li>2 Oignon émincé</li>
+                                             <li>600gr Vermicelles</li>
+                                             <li>1/2 càc Gingembre</li>
+                                             <li>1/4 càc Cannelle</li>
+                                             <li>1/4 càc Ras el hanout</li>
+                                             <li>1/4 càc safran</li>
+                                             <li>1/2 càc Poivre</li>
+                                             <li>1 càs Miel</li>
+                                             <li>2 càs Persil et coriandre</li>
+                                             <li>60gr Beurre</li>
+                                             <li>50gr Amandes émondées et grillées</li>
+                                             <li>2 càs Amandes effilées</li>
+                                         </ul>
+                                         <h4 class="text-warning">Préparation</h4>
+                                         <ol>
+                                             <li>
+                                              Faites fondre le beurre avec un peu d'huile dans une marmite, ajoutez l'oignon haché. Faites revenir pendant au moins 5 min à feu doux, jusqu’à ce que l'oignon devient translucide.</li>
+                                             <li>
+                                              Ajoutez une poignée de coriandre hachée. Ajoutez les morceaux de poulet dans votre marmite. Ajoutez les épices (gingembre, ras el hanout, cannelle en poudre ou en bâtonnet de préférence, safran). Salez ,poivrez selon le gout de chacun.</li>
+                                             <li>
+                                              Couvrez suffisament d'eau et laissez cuire votre poulet 30 à 40 minutes. Retirez le poulet ensuite, émiettez-le et gardez de côté. Continuez à faire réduire la sauce à feu doux, en ajoutant une grande cuillère de miel 5 minutes et rectifiez le gout si nécessaire </li>
+                                             <li>
+                                              Dans le bas d’un couscoussier, placez un peu d’eau à bouillir Huilez les cheveux d’ange avec 2 a 3 c a soupe d’huile de table. Placez-la dans le haut du couscoussier et laissez cuire à la vapeur pendant 15 minutes.
+                                             </li>
+                                             <li>
+                                              Mouiller les vermicelles avec de l’eau bouillante, versez ensuite les vermicelles dans une large terrine, ajoutez un peu de sel et laissez absorber l’eau. pendant quelques minutes. Faites cuire à la vapeur, et répétez l’opération avec l’eau bouillante sur le haut du couscoussier, jusqu’à ce que la pâte soit bien cuite.
+                                             </li>
+                                             <li>
+                                              Retirez les vermicelles de la vapeur, ajoutez le beurre, le sucre glace et des amandes grillés concassées pour donner un côté croquant à notre vermicelles malheureusement je ne l’ai pas fait car je n’avais pas suffisamment d’amandes, mélangez bien le tout à l’aide d’une fourchette (attention à ne pas vous brûler).
+                                             </li>
+                                             <li>
+                                              Retirez les vermicelles de la vapeur, ajoutez le beurre, le sucre glace et des amandes grillés concassées pour donner un côté croquant à notre vermicelles malheureusement je ne l’ai pas fait car je n’avais pas suffisamment d’amandes, mélangez bien le tout à l’aide d’une fourchette (attention à ne pas vous brûler).
+                                             </li>
+                                             
+                                     </div>
+                                   </div>
+                                 </div>
+                             </div>   
+                         </div>   
+                     </div>
+                 </div>
+                 <!--fin contenu-->
+               </div>
+              <!--end partie seffa medfouna-->
+             </div>  
+             <div class="row gx-0">
+              <!--partie tagine aux pruneaux-->
+               <div class="card" id="row_id">
+                 <div class="row ">
+                   <!--image-->
+                     <div class="col-md-4">
+                       <img src="../login/assets/images/Les-ingredients-du-tajine-traditionnel-aux-pruneaux-et-aux-amandes.jpg" class="card-img-top" alt="">
+                       <img src="../login/assets/images/images/306301.jpg" class="card-img-top" alt="">
+                       <img src="../login/assets/images/2.jpg" class="card-img-top" alt="">
+                       <img src="../login/assets/images/01-tajine-d-agneau-aux-pruneaux-et-amandes4.jpg" class="card-img-top" alt="">
+                       <img src="../login/assets/images/tagine5.jpg "class="card-img-top" alt="">
+                     </div>
+                     <!--contenu-->
+                     <div class="col-md-8">
+                         <div class="card-body">
+                             <div class="col">
+                               <!--titre-->
+                                 <div class="row">
+                                     <h3 class="text-center text-dark mb-4"><span class="text-warning">Tajine d'Agneau aux Pruneaux et Amandes</span></h3>
+                                 </div>
+                                 <!--information generale-->
+                                 <div class="row">
+                                     <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                         <span class="material-icons-sharp text-warning">
+                                             alarm
+                                             </span>
+                                             30min
+                                     </div>
+                                     <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                       <span class="material-icons-sharp text-warning">
+                                         local_fire_department
+                                         </span>
+                                          1h15min
+                                     </div>
+                                     <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                         <span class="material-icons-sharp text-warning">
+                                             signal_cellular_alt
+                                             </span>
+                                             facile
+                                     </div>
+                                     <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                         <span class="material-icons-sharp text-warning">
+                                             person
+                                             </span>
+                                             8
+                                     </div>
+                                     <!--start rating star-->
+                                     <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                      <fieldset class="rating">
+                                        <input type="radio" id="star5" name="rating" value="5"/><label for="star5" class="full" title="Awesome"></label>
+                                        <input type="radio" id="star4.5" name="rating" value="4.5"/><label for="star4.5" class="half"></label>
+                                        <input type="radio" id="star4" name="rating" value="4"/><label for="star4" class="full"></label>
+                                        <input type="radio" id="star3.5" name="rating" value="3.5"/><label for="star3.5" class="half"></label>
+                                        <input type="radio" id="star3" name="rating" value="3"/><label for="star3" class="full"></label>
+                                        <input type="radio" id="star2.5" name="rating" value="2.5"/><label for="star2.5" class="half"></label>
+                                        <input type="radio" id="star2" name="rating" value="2"/><label for="star2" class="full"></label>
+                                        <input type="radio" id="star1.5" name="rating" value="1.5"/><label for="star1.5" class="half"></label>
+                                        <input type="radio" id="star1" name="rating" value="1"/><label for="star1" class="full"></label>
+                                        <input type="radio" id="star0.5" name="rating" value="0.5"/><label for="star0.5" class="half"></label>
+                                      </fieldset>
+                                      <p id="rating-value1"></p>
+                                    </div>
+                                     <!--end rating star-->
+                                 </div>
+                                 <!--ingredient / preparation-->
+                                 <div class="row">
+                                   <div class="col-md-12">
+                                     <div class="border p-4">
+                                         <h4 class="text-warning">Ingrédients</h4>
+                                         <ul class="pl-3">
+ 
+                                             <li>1,5 kg de gigot d'agneau coupée en morceaux</li>
+                                             <li>600 g de pruneaux</li>
+                                             <li>2 oignon emincés</li>
+                                             <li>100g d'amandes mondées (pelées)</li>
+                                             <li>1 cuillère à café de cannelle</li>
+                                             <li>1 cuillère à café de gingembre</li>
+                                             <li>1 dose de safran</li>
+                                             <li>4 cuillères à soupe de sucre</li>
+                                             <li>1/2 verre d'huile</li>
+                                             <li>Sel, Poivre</li>
+                                             
+                                         </ul>
+                                         <h4 class="text-warning">Préparation</h4>
+                                         <ol>
+                                             <li>
+                                              Préparation de la sauce:
+
+                                              Dans une marmite, Faites revenir les oignons émincés et la viande dans l'huile, ajoutez , la cannelle, le gingembre, la safran, sel et poivre. Couvrez avec 1L d'eau et faites cuire 1 heure à feu très doux.
+                                             </li>
+                                             <li>
+                                              Préparation des pruneaux:
+
+                                              Tremper les pruneaux dans de l'eau chaude pendant au moins 30 minutes.
+                                              <br>
+                                              Dans une casserole, faites cuire les pruneaux égouttés dans 2 louche de sauce de viande et du sucre saupoudrez avec un peu de cannelle puis poursuivez la cuisson 15 min à couvert. Le temps de cuisson des pruneaux  peut varier grandement selon les pruneaux, mais la durée moyenne est de 15 à 30 minutes.
+                                              <br>
+                                              Faites dorer les amandes dans de l'huile.
+                                             </li>
+                                             <li>
+                                              Dressage du tajine:
+
+                                              Mettre la viande sur une grande assiette de service (si vous avez fait cuire dans un tajine, il sera également utilisé comme plat de service), et versez les pruneaux et la sauce onctueuse par dessus. Si désiré, garnir d'amandes frites et / ou de graines de sésame.
+                                             </li>
+                                             
+ 
+                                         </ol>
+                                       </div>
+                                   </div>     
+                                 </div>
+                             </div>   
+                         </div>   
+                     </div>
+                 </div>
+                 <!--fin contenu-->
+             </div>
+              <!--end partie rfissa-->
+             </div> 
+        </div>
+    </div>
+  </section>
+  <!--end historique-->
+
+ 
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <script src="../main/entree.js"></script>
+</body>
+</html>
