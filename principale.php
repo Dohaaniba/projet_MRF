@@ -1,3 +1,51 @@
+<?php
+session_start();
+
+include('connectio.php');
+include('functions.php');
+
+if(isset( $_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD']=="POST"){
+    //something was posted
+    $usefnam=$_POST['nom'];
+   
+    $usemail=$_POST['email'];
+    $userphone=$_POST['telephone'];
+   
+    $userplat=$_POST['plat'];
+    $useradresse = $_POST['adresse'];
+  
+
+    
+    if (!empty($usefnam)  && !empty($usemail) && !empty($userphone) && !empty($userplat) && !empty($useradresse)) {
+        
+        
+
+        
+
+        //save to data base
+        $query ="insert into collaboration (nom,email,telephone,plat,adresse) values ('$usefnam','$usemail','$userphone','$userplat','$useradresse')";
+        
+        $result=mysqli_query($con,$query);
+        if ($result1 !== 0) {
+            header("Location: principale.php?success=Your informations has been send successfully...");
+         exit();
+       }else {
+               header("Location: principale.php?error=unknown error occurred!");
+            exit();
+       }
+
+        //header("Location: dessert.php");
+        //die;
+    
+    }
+    else {
+        echo "s'il vous plait entrer des informations valide !";
+    }
+}
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +69,7 @@
   <nav class="navbar navbar-default navbar-expand-lg bg-body-tertiary py-6 fixed-top">
     <div class="container">
       <!--logo-->
-      <a class="navbar-brand"  href="#">
+      <a class="navbar-brand"  href="principale.php">
         <img src="../login/assets/images/logojdid.png.png" alt="LOGO " width="45" height="39" >
         Morrocan F<span id="logo_span">oo</span>d
       </a>
@@ -32,7 +80,7 @@
         <ul class="navbar-nav me-5 mb-2 mb-lg-0">
           <!--home-->
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Acceuille</a>
+            <a class="nav-link active" aria-current="page" href="principale.php">Acceuille</a>
           </li>
           <!--plat-->
           <li class="nav-item dropdown">
@@ -40,9 +88,9 @@
               Plat
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Entrée</a></li>
-              <li><a class="dropdown-item" href="#">Desser</a></li>
-              <li><a class="dropdown-item" href="#">Plat traditionnel</a></li>
+              <li><a class="dropdown-item" href="entree.html">Entrée Marocaine</a></li>
+              <li><a class="dropdown-item" href="dessert.html">Dessert</a></li>
+              <li><a class="dropdown-item" href="Plat Traditionnel.html">Plats traditionnels</a></li>
             </ul>
           </li>
           <!--espace-->
@@ -51,8 +99,8 @@
               Espace Utilisateur
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Vos recette</a></li>
-              <li><a class="dropdown-item" href="#">Vos commentaires</a></li>
+              <li><a class="dropdown-item" href="projet.php">Vos recettes</a></li>
+              <li><a class="dropdown-item" href="commentaire.php">Vos commentaires</a></li>
              
             </ul>
         </li>
@@ -63,13 +111,13 @@
           <i class="bi bi-search"></i>
           <div class="dropdown">
             <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-              <img src="../login/assets/images/user.jfif" alt="" width="32" height="32" class="rounded-circle me-2">
+              <img src="../login/assets/images/userr.jfif" alt="" width="32" height="32" class="rounded-circle me-2">
             </a>
             <ul class="dropdown-menu dropdown-menu-dark text-small shadow" >
-              <li><a class="dropdown-item" href="#">votre Profile</a></li>
+              <li><a class="dropdown-item" href="profile.php">votre Profile</a></li>
               <li><a class="dropdown-item" href="#">Paramètres</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Se déconnecter</a></li>
+              <li><a class="dropdown-item" href="logout.php">Se déconnecter</a></li>
             </ul>
           </div>
         </div>
@@ -210,41 +258,49 @@ Khadija Bensdira, est l’ambassadrice de la cuisine traditionnelle marocaine da
           </div>
         </div>
         <!--un formulaire pour les restau qui veulent collaborer-->
-        <form> 
+        <form method="post"> 
           <div class="row">
             <div class="col-md-6 col-sm">
               <div class="input-group mb-3">
                 <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
-                <input type="text" class="form-control" placeholder="votre nom" >
+                <input type="text" class="form-control" name="nom" placeholder="votre nom" >
               </div>
               <!--selectionner-->
               <div class="input-group mb-3">
-                <label class="input-group-text" for="inputGroupSelect01"><i class="fa-solid fa-utensils"></i></label>
-                <select class="form-select" id="inputGroupSelect01">
-                  <option selected>choisir le type du plat</option>
-                  <option value="1"> Entrée</option>
-                  <option value="2">Plat traditionnel</option>
-                  <option value="3">Dessert</option>
-                </select>
+                <label class="input-group-text" for="inputGroupSelect01"><i class="fas fa-utesils"></i></label>
+                <input type="text" class="form-control" name="plat" placeholder="type du plat .." >
               </div>
             </div>
             <!--parti mail-->
               <div class="col-md-6 col-sm">
                 <div class="input-group mb-3">
                   <span class="input-group-text" id="basic-addon1"><i class="fas fa-at"></i></span>
-                  <input type="text" class="form-control" placeholder="Votre email" >
+                  <input type="text" class="form-control" name="email" placeholder="Votre email" >
                 </div>
                 <!--tel-->
                 <div class="input-group mb-3">
                   <span class="input-group-text" id="basic-addon1"><i class="fas fa-phone"></i></span>
-                  <input type="number" class="form-control" placeholder="Numero de téléphone" >
+                  <input type="number" class="form-control" name="telephone" placeholder="Numero de téléphone" >
                 </div>
                 <!--adresse-->
                 <div class="input-group mb-3">
                   <span class="input-group-text" id="basic-addon1"><i class="fas fa-home"></i></span>
-                  <input type="text" class="form-control" placeholder="Adresse zone Ex:Oujda 6000" >
+                  <input type="text" class="form-control" name="adresse" placeholder="Adresse zone Ex:Oujda 6000" >
                 </div>
                 <!--fin partie adresse-->
+                <!--start button-->
+                <button type="submit" id="submit" name="submit" style="
+                    border: none;
+                    outline: none;
+                    width: 100%;
+                    height: 45px;
+                    background: #ececec;
+                    border-radius: 5px;
+                    transition: .4s;
+                    background: #ffc107;">
+                             enregistrer
+                        </button>
+                        <!--end button-->
               </div>
             <!--fin partie mail-->
           </div>

@@ -1,12 +1,27 @@
 <?php
-$dbhost ="localhost";
-$dbuser="root";
-$dbpass="";
-$dbname="login_sample_db";
 
- if (!$con = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname))
- {
+$servername = "localhost";
 
-    die("filed to connect !");
- }
+$username = "root";
+
+$password = "";
+
+$db = "login_sample_db";
+
+
+
+// Create connection
+
+$con = mysqli_connect($servername, $username, $password,$db);
+
+
+
+// Check connection
+
+if (!$con) {
+
+   die("Connection failed: " . mysqli_connect_error());
+
+}
+
 

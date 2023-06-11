@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--web fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"rel="stylesheet">
+  <!--lien pour utuliser bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--lien pour acceder au fichier CSS-->
+  <link rel="stylesheet" href="../login/assets/css/entree.css">
+  <!--titre de la page web-->
+  <title>MRF</title>
+</head>
+<body>
+  <!--navclass-->
+  <nav class="navbar navbar-default navbar-expand-lg bg-body-tertiary py-6 fixed-top">
+
+    <div class="container">
+      <!--logo-->
+      <a class="navbar-brand" href="principale.php">
+        <img src="../login/assets/images/logojdid.png.png" alt="LOGO " width="45" height="39">
+        Morrocan F<span id="logo_span">oo</span>d
+      </a>
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse justify-content-end collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-5 mb-2 mb-lg-0">
+          <!--home-->
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="principale.php">Acceuille</a>
+          </li>
+          <!--plat-->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle px-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Plat
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="entree.html">Entrée Marocaine</a></li>
+              <li><a class="dropdown-item" href="dessert.html">Dessert</a></li>
+              <li><a class="dropdown-item" href="Plat Traditionnel.html">Plat traditionnel</a></li>
+            </ul>
+          </li>
+          <!--espace-->
+          <li class="nav-item dropdown">
+
+            <a class="nav-link dropdown-toggle px-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Espace Utilisateur
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="projet.php">Vos recettes</a></li>
+              <li><a class="dropdown-item" href="commentaire.php">Vos commentaires</a></li>
+
+            </ul>
+          </li>
+        </ul>
+        <!--recherche-->
+        <form class="d-flex">
+          <input class="form-control mr-2" id="search" type="search" placeholder="Search" aria-label="Search">
+          <i class="bi bi-search"></i>
+          <div class="dropdown">
+            <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="../login/assets/images/userr.jfif" alt="" width="32" height="32" class="rounded-circle me-2">
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+              <li><a class="dropdown-item" href="profil.php">votre Profile</a></li>
+              <li><a class="dropdown-item" href="profile.php">Paramètres</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="logout.php">Se déconnecter</a></li>
+            </ul>
+          </div>
+      </div>
+      </form>
+    </div>
+
+    </div>
+  </nav>
+  <!--end nav class-->
+
+
+ 
+
+  <!--partie historique des plats marocains-->
+  <section class="partie py-5">
+    <div class="container">
+        <h1 class="text-center text-dark mb-4 mt-5"><span class="text-warning"> Entrée Marocaine</span></h1>
+        <div class="col">
+            <div class="row gx-0">
+             <!--partie salade-->
+             <div class="card" id="row_id" >
+                <div class="row " >
+                  <!--image-->
+                    <div class="col-md-4">
+                      <img src="../login/assets/images/salade.png" class="card-img-top"  id="img_recette"  alt="">
+                    </div>
+                    <!--contenu-->
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <div class="col">
+                              <!--titre-->
+                                <div class="row">
+                                    <h3 class="text-center text-dark mb-4" ><span class="text-warning">Salade</span></h3>
+                                </div>
+                                <!--information generale-->
+                                <div class="row"  >
+                                    <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                        <span class="material-icons-sharp text-warning">
+                                            alarm
+                                            </span>
+                                            5min
+                                    </div>
+                                    <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                        <span class="material-icons-sharp text-warning">
+                                            signal_cellular_alt
+                                            </span>
+                                            facile
+                                    </div>
+                                    <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                        <span class="material-icons-sharp text-warning">
+                                            balance
+                                            </span>
+                                            78 Kcal
+                                    </div>
+                                    <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                        <span class="material-icons-sharp text-warning">
+                                            person
+                                            </span>
+                                            4
+                                    </div>
+                                    <!--start rating star-->
+                                    <div class="col-md-3 d-flex justify-content-center align-items-center">
+                                      <fieldset class="rating">
+                                        <input type="radio" id="star5" name="rating" value="5"/><label for="star5" class="full" title="Awesome"></label>
+                                        <input type="radio" id="star4.5" name="rating" value="4.5"/><label for="star4.5" class="half"></label>
+                                        <input type="radio" id="star4" name="rating" value="4"/><label for="star4" class="full"></label>
+                                        <input type="radio" id="star3.5" name="rating" value="3.5"/><label for="star3.5" class="half"></label>
+                                        <input type="radio" id="star3" name="rating" value="3"/><label for="star3" class="full"></label>
+                                        <input type="radio" id="star2.5" name="rating" value="2.5"/><label for="star2.5" class="half"></label>
+                                        <input type="radio" id="star2" name="rating" value="2"/><label for="star2" class="full"></label>
+                                        <input type="radio" id="star1.5" name="rating" value="1.5"/><label for="star1.5" class="half"></label>
+                                        <input type="radio" id="star1" name="rating" value="1"/><label for="star1" class="full"></label>
+                                        <input type="radio" id="star0.5" name="rating" value="0.5"/><label for="star0.5" class="half"></label>
+                                      </fieldset>
+                                      <p id="rating-value1"></p>
+                                    </div>
+                                    
+                                      
+                                    
+                                    <!--end rating star-->
+                                </div>
+                                <!--ingredient / preparation-->
+                                <div class="row" >
+                                  <div class="col-md-12">
+                                    <div class="border p-4">
+                                        <h4 class="text-warning">Ingrédients</h4>
+                                        <ul class="pl-3">
+                                            <li>3 tomates</li>
+                                            <li>2 poivrons verts grillés,lavés et coupés en petit morceau</li>
+                                            <li>un oignon</li>
+                                            <li>persil et coriandre</li>
+                                            <li>2 c à café d huile d olive</li>
+                                            <li>1 c à s de vinaigre de citron</li>
+                                            <li>un peu de sel</li>
+                                            <li>un peu de poivre</li>
+                                            <li>un peu de cumin</li>
+                                        </ul>
+                                        <h4 class="text-warning">Préparation</h4>
+                                        <ol>
+                                            <li>Dans un saladier mettre les tomates coupées en petit morceau
+                                                <br>
+                                                rajouter les poivrons, l oignon coupé en petit morceau,le persil,le coriandre.
+                                            </li>
+                                            <li>
+                                                Rajouter l huile d olive,le vinaigre,le sel,le poivre,le cumin.Mélanger le toute laisser au frais avant de servir
+                                            </li>
+                                        </ol>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="row mt-auto">
+                                    <div class="col-md-12">
+                                       <div class="border p-4 text-right d-flex justify-content-end align-items-center">
+                                          <div class="chef-info">
+                                             <p class="small text-muted">Réalisé par :</p>
+                                             <a  style="text-decoration: none;" href="principale.php"><p class=" h6 text-dark">Chef Choumicha</p></a>
+                                          </div>
+                                          <img src="../login/assets/images/signature1.png" alt="Signature du chef" class="img-fluid signature ml-3" width="60px" height="80px">
+                                       </div>
+                                    </div>
+                                  </div>
+                            </div>   
+                        </div>   
+                    </div>
+                </div>
+                <!--fin contenu-->
+            </div>
+             <!--end partie salade-->
+            </div>
+
+
+            
+            <div class="row gx-0">
+             <!--partie briouat-->
+              <div class="card " id="row_id">
+                <div class="row ">
+                  <!--image-->
+                    <div class="col-md-4">
+                      <img src="../login/assets/images/briouat_2.jpg" class="card-img-top" id="img_recette" alt="">
+                    </div>
+                    <!--contenu-->
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <div class="col">
+                              <!--titre-->
+                                <div class="row">
+                                    <h3 class="text-center text-dark mb-4"><span class="text-warning">Briouats à la Viande Hachée</span></h3>
+                                </div>
+                                <!--information generale-->
+                                <div class="row">
+                                    <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                        <span class="material-icons-sharp text-warning">
+                                            alarm
+                                            </span>
+                                            45min
+                                    </div>
+                                    <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                      <span class="material-icons-sharp text-warning">
+                                        local_fire_department
+                                        </span>
+                                         20min
+                                    </div>
+                                    <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                        <span class="material-icons-sharp text-warning">
+                                            signal_cellular_alt
+                                            </span>
+                                            facile
+                                    </div>
+                                    <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                        <span class="material-icons-sharp text-warning">
+                                            person
+                                            </span>
+                                            6
+                                    </div>
+                                    <!--start rating star-->
+                                    <div class="col-md-4 d-flex justify-content-center align-items-center">
+                                      <fieldset class="rating">
+                                        <input type="radio" id="star5" name="rating" value="5"/><label for="star5" class="full" title="Awesome"></label>
+                                        <input type="radio" id="star4.5" name="rating" value="4.5"/><label for="star4.5" class="half"></label>
+                                        <input type="radio" id="star4" name="rating" value="4"/><label for="star4" class="full"></label>
+                                        <input type="radio" id="star3.5" name="rating" value="3.5"/><label for="star3.5" class="half"></label>
+                                        <input type="radio" id="star3" name="rating" value="3"/><label for="star3" class="full"></label>
+                                        <input type="radio" id="star2.5" name="rating" value="2.5"/><label for="star2.5" class="half"></label>
+                                        <input type="radio" id="star2" name="rating" value="2"/><label for="star2" class="full"></label>
+                                        <input type="radio" id="star1.5" name="rating" value="1.5"/><label for="star1.5" class="half"></label>
+                                        <input type="radio" id="star1" name="rating" value="1"/><label for="star1" class="full"></label>
+                                        <input type="radio" id="star0.5" name="rating" value="0.5"/><label for="star0.5" class="half"></label>
+                                      </fieldset>
+                                      <p id="rating-value2"></p>
+                                    </div>
+                                    <!--end rating star-->
+                                </div>
+                                <!--ingredient / preparation-->
+                                <div class="row">
+                                  <div class="col-md-12">
+                                    <div class="border p-4">
+                                        <h4 class="text-warning">Ingrédients</h4>
+                                        <ul class="pl-3">
+                                            <li>30 Feuilles de brikes</li>
+                                            <li>1 Kg de Viande hachée</li>
+                                            <li>10 Oeufs</li>
+                                            <li>2 Oignons hachés finement</li>
+                                            <li>1 Bouquet garni finement haché(coriande,persil)</li>
+                                            <li>1 cuil. à café de cannelle en poudre</li>
+                                            <li>3 cuil. à soupe d'huile</li>
+                                            <li>Sel, Poivre</li>
+                                            <li>Huile pour la friture</li>
+                                        </ul>
+                                        <h4 class="text-warning">Préparation</h4>
+                                        <ol>
+                                            <li>
+                                              Dans une poêle mettez l'huile, les oignons, la viande hachée, coriandre, persil, sel, poivre. Faites cuire 15mn à feu moyen jusqu'à absorption complète du jus.
+                                            </li>
+                                            <li>
+                                              Incorporer les 8 oeufs battus en omelette au mélange et remuez constamment, saupoudrez de cannelle et poursuivez la cuisson en remuant pendant 5 minutes.
+                                            </li>
+                                            <li>
+                                              Disposez une peu de farce sur les carrés de pâte et refermez en formant des chaussons triangulaires en pinçant les bords avec les doigts . Collez à l'aide d'un pinceau trempé dans l'oeuf battu.
+                                            </li>
+                                            <li>
+                                              Chauffer l'huile dans une friteuse jusqu'à ce qu'elle soit bien chaude, faites frire dedans les briouats des 2 cotés.
+                                              <br>
+                                              Servez les bien chaud Bessaha Ouraha.
+                                            </li>
+
+                                        </ol>
+                                      </div>
+                                  </div>     
+                                </div>
+                                <div class="row mt-auto">
+                                    <div class="col-md-12">
+                                       <div class="border p-4 text-right d-flex justify-content-end align-items-center">
+                                          <div class="chef-info">
+                                             <p class="small text-muted">Réalisé par :</p>
+                                             <a  style="text-decoration: none;" href="principale.php"><p class=" h6 text-dark">Chef Moha</p></a>
+                                          </div>
+                                          <img src="../login/assets/images/signature1.png" alt="Signature du chef" class="img-fluid signature ml-3" width="60px" height="80px">
+                                       </div>
+                                    </div>
+                                  </div>
+                            </div>   
+                        </div>   
+                    </div>
+                </div>
+                <!--fin contenu-->
+            </div>
+             <!--end partie briouat-->
+            </div> 
+            
+            
+            <div class="row gx-0">
+             <!--partie maakouda-->
+              <div class="card" id="row_id">
+                <div class="row " >
+                  <!--image-->
+                    <div class="col-md-4">
+                      <img src="../login/assets/images/maakouda.jpg" class="card-img-top" id="img_recette" alt="">
+                    </div>
+                    <!--contenu-->
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <div class="col">
+                              <!--titre-->
+                                <div class="row">
+                                    <h3 class="text-center text-dark mb-4"><span class="text-warning">Maakouda</span></h3>
+                                </div>
+                                <!--information generale-->
+                                <div class="row">
+                                    <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                        <span class="material-icons-sharp text-warning">
+                                            alarm
+                                            </span>
+                                            30min
+                                    </div>
+                                    <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                      <span class="material-icons-sharp text-warning">
+                                        local_fire_department
+                                        </span>
+                                        5min
+                                    </div>
+                                    <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                        <span class="material-icons-sharp text-warning">
+                                            signal_cellular_alt
+                                            </span>
+                                            facile
+                                    </div>
+                                    <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                        <span class="material-icons-sharp text-warning">
+                                            person
+                                            </span>
+                                            6
+                                    </div>
+                                    <!--start rating star-->
+                                    <div class="col-md-4 d-flex justify-content-center align-items-center">
+                                      <fieldset class="rating">
+                                        <input type="radio" id="star5" name="rating" value="5"/><label for="star5" class="full" title="Awesome"></label>
+                                        <input type="radio" id="star4.5" name="rating" value="4.5"/><label for="star4.5" class="half"></label>
+                                        <input type="radio" id="star4" name="rating" value="4"/><label for="star4" class="full"></label>
+                                        <input type="radio" id="star3.5" name="rating" value="3.5"/><label for="star3.5" class="half"></label>
+                                        <input type="radio" id="star3" name="rating" value="3"/><label for="star3" class="full"></label>
+                                        <input type="radio" id="star2.5" name="rating" value="2.5"/><label for="star2.5" class="half"></label>
+                                        <input type="radio" id="star2" name="rating" value="2"/><label for="star2" class="full"></label>
+                                        <input type="radio" id="star1.5" name="rating" value="1.5"/><label for="star1.5" class="half"></label>
+                                        <input type="radio" id="star1" name="rating" value="1"/><label for="star1" class="full"></label>
+                                        <input type="radio" id="star0.5" name="rating" value="0.5"/><label for="star0.5" class="half"></label>
+                                      </fieldset>
+                                      <p id="rating-value3"></p>
+                                    </div>
+                                    <!--end rating star-->
+                                </div>
+                                <!--ingredient / preparation-->
+                                <div class="row">
+                                  <div class="col-md-12">
+                                    <div class="border p-4">
+                                        <h4 class="text-warning">Ingrédients</h4>
+                                        <ul class="pl-3">
+                                            <li>600 g de pomme de terre spécial frite nettoyées lavées et coupées</li>
+                                            <li>1 oeuf entier</li>
+                                            <li>1 oignon vert ciselé</li>
+                                            <li>1 cs de persil ciselé</li>
+                                            <li>1 cs de coriandre ciselé</li>
+                                            <li>2 gousses d'ail râpées</li>
+                                            <li>1 cc de paprika</li>
+                                            <li>1 cc de cumin</li>
+                                            <li>½ cc de curcuma</li>
+                                            <li>sel et poivre</li>
+                                            <li>farine</li>
+                                            <li>huile pour la friture</li>
+                                        </ul>
+                                        <h4 class="text-warning">Préparation</h4>
+                                        <ol>
+                                            <li>
+                                              Faire cuire les pommes de terres dans une eau salée.                                        </li>
+                                            <li>
+                                              Egoutter et placer dans un saladier et à l'aide d'un presse purée ou une fourchette les écraser.                                        </li>
+                                            <li>
+                                              Ajouter les épices, l'oeuf, l'oignon, le persil, la coriandre et l'ail et mélanger bien.                                        </li>
+                                            <li>
+                                              Laisser refroidir
+                                            </li>
+                                            <li>
+                                              Confectionner des boules , les aplatir et les passer dans la farine en retirant l'excédant.
+                                            </li>
+                                            <li>
+                                              Faire chauffer de l'huile dans une poêle et faire frire les maakouda des deux faces.
+                                            </li>
+                                            <li>
+                                              Retirer de l'huile et placer sur du papier absorbant.
+                                            </li>
+                                        </ol>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="row mt-auto">
+                                    <div class="col-md-12">
+                                       <div class="border p-4 text-right d-flex justify-content-end align-items-center">
+                                          <div class="chef-info">
+                                             <p class="small text-muted">Réalisé par :</p>
+                                             <a  style="text-decoration: none;" href="principale.php"><p class=" h6 text-dark">Chef Khadija</p></a>
+                                          </div>
+                                          <img src="../login/assets/images/signature1.png" alt="Signature du chef" class="img-fluid signature ml-3" width="60px" height="80px">
+                                       </div>
+                                    </div>
+                                  </div>
+                            </div>   
+                        </div>   
+                    </div>
+                </div>
+                <!--fin contenu-->
+              </div>
+             <!--end partie maakouda-->
+
+
+
+             <div class="row gx-0">
+              <!--partie harira-->
+               <div class="card" id="row_id" >
+                 <div class="row ">
+                   <!--image-->
+                     <div class="col-md-4">
+                       <img src="https://th.bing.com/th/id/OIP.C7ezQ0Ez2P0BWQL05V-LtwHaIg?pid=ImgDet&rs=1" class="card-img-top" id="img_recette"  alt="">
+                     </div>
+                     <!--contenu-->
+                     <div class="col-md-8">
+                         <div class="card-body">
+                             <div class="col">
+                               <!--titre-->
+                                 <div class="row">
+                                     <h3 class="text-center text-dark mb-4"><span class="text-warning">Harira</span></h3>
+                                 </div>
+                                 <!--information generale-->
+                                 <div class="row">
+                                     <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                         <span class="material-icons-sharp text-warning">
+                                             alarm
+                                             </span>
+                                             15min
+                                     </div>
+                                     <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                       <span class="material-icons-sharp text-warning">
+                                         local_fire_department
+                                         </span>
+                                         50min
+                                     </div>
+                                     <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                         <span class="material-icons-sharp text-warning">
+                                             signal_cellular_alt
+                                             </span>
+                                             moyen
+                                     </div>
+                                     <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                         <span class="material-icons-sharp text-warning">
+                                             person
+                                             </span>
+                                             5
+                                     </div>
+                                     <!--start rating star-->
+                                     <div class="col-md-4 d-flex justify-content-center align-items-center">
+                                      <fieldset class="rating">
+                                        <input type="radio" id="star5" name="rating" value="5"/><label for="star5" class="full" title="Awesome"></label>
+                                        <input type="radio" id="star4.5" name="rating" value="4.5"/><label for="star4.5" class="half"></label>
+                                        <input type="radio" id="star4" name="rating" value="4"/><label for="star4" class="full"></label>
+                                        <input type="radio" id="star3.5" name="rating" value="3.5"/><label for="star3.5" class="half"></label>
+                                        <input type="radio" id="star3" name="rating" value="3"/><label for="star3" class="full"></label>
+                                        <input type="radio" id="star2.5" name="rating" value="2.5"/><label for="star2.5" class="half"></label>
+                                        <input type="radio" id="star2" name="rating" value="2"/><label for="star2" class="full"></label>
+                                        <input type="radio" id="star1.5" name="rating" value="1.5"/><label for="star1.5" class="half"></label>
+                                        <input type="radio" id="star1" name="rating" value="1"/><label for="star1" class="full"></label>
+                                        <input type="radio" id="star0.5" name="rating" value="0.5"/><label for="star0.5" class="half"></label>
+                                      </fieldset>
+                                      <p id="rating-value4"></p>
+                                     </div>
+                                     <!--end rating star-->
+                                 </div>
+                                 <!--ingredient / preparation-->
+                                 <div class="row">
+                                   <div class="col-md-12">
+                                     <div class="border p-4">
+                                         <h4 class="text-warning">Ingrédients</h4>
+                                         <ul class="pl-3">
+                                             <li>200 g de viande de mouton</li>
+                                             <li>1 bol de pois chiches trempés</li>
+                                             <li>100 g de lentilles</li>
+                                             <li>1 coulis de tomates</li>
+                                             <li>1 bouquet de persil, 1 bouquet de coriandre</li>
+                                             <li>2 branches de céleri</li>
+                                             <li>1 oignon</li>
+                                             <li>Une petite boite de concentré de tomate</li>
+                                             <li>1 pincée de cannelle, safran et un grand verre de farine</li>
+                                             <li>1 noix de beurre ou 1 c.à.c de smen</li>
+                                             <li>60 g de cheveux d'anges</li>
+                                             <li>Sel et poivre</li>
+                                         </ul>
+                                         <h4 class="text-warning">Préparation</h4>
+                                         <ol>
+                                             <li>
+                                              Couper la viande en petits dés, hacher finement le coriandre, le persil, le céleri et l'oignon.                                       
+                                            </li>
+                                            <li>
+                                              Les mettre dans une cocotte-minute, ajouter les pois chiches, les lentilles, le safran, la cannelle, le poivre, le sel, la noix de beurre (ou smen) et le coulis de tomates.                                        
+                                            </li>
+                                              Recouvrir de 2 litres d'eau et faire cuire à couvert 20 à 30 min.
+                                            <li>
+                                                Dans un Tupperware, délayer la farine dans 1/2 litre d'eau, secouer énergiquement pour éviter les grumeaux.                                        
+                                            </li>
+                                            <li>
+                                              Vérifier l'assaisonnement et la consistance de la soupe qui doit être veloutée mais non épaisse, rajouter de l'eau si c'est le cas.
+                                            </li>
+                                            <li>
+                                              Une fois la soupe servie, vous pouvez y mettre un peu de jus de citron.
+                                            </li>
+                                         </ol>
+                                     </div>
+                                   </div>
+                                 </div>
+                                 <div class="row mt-auto">
+                                    <div class="col-md-12">
+                                       <div class="border p-4 text-right d-flex justify-content-end align-items-center">
+                                          <div class="chef-info">
+                                             <p class="small text-muted">Réalisé par :</p>
+                                             <a  style="text-decoration: none;" href="principale.php"><p class=" h6 text-dark">Chef Choumicha</p></a>
+                                          </div>
+                                          <img src="../login/assets/images/signature1.png" alt="Signature du chef" class="img-fluid signature ml-3" width="60px" height="80px">
+                                       </div>
+                                    </div>
+                                  </div>
+                             </div>   
+                         </div>   
+                     </div>
+                 </div>
+                 <!--fin contenu-->
+               </div>
+              <!--end partie harira-->
+
+
+              <div class="row gx-0">
+                <!--partie Seffa-->
+                 <div class="card"  id="row_id">
+                   <div class="row " >
+                     <!--image-->
+                       <div class="col-md-4">
+                         <img src="../login/assets/images/seffa.jpg" class="card-img-top" id="img_recette" alt="">
+                       </div>
+                       <!--contenu-->
+                       <div class="col-md-8">
+                           <div class="card-body">
+                               <div class="col">
+                                 <!--titre-->
+                                   <div class="row">
+                                       <h3 class="text-center text-dark mb-4"><span class="text-warning">Seffa</span></h3>
+                                   </div>
+                                   <!--information generale-->
+                                   <div class="row">
+                                       <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                           <span class="material-icons-sharp text-warning">
+                                               alarm
+                                               </span>
+                                               20min
+                                       </div>
+                                       <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                         <span class="material-icons-sharp text-warning">
+                                           local_fire_department
+                                           </span>
+                                           40min
+                                       </div>
+                                       <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                           <span class="material-icons-sharp text-warning">
+                                               signal_cellular_alt
+                                               </span>
+                                               facile
+                                       </div>
+                                       <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                           <span class="material-icons-sharp text-warning">
+                                               person
+                                               </span>
+                                               4
+                                       </div>
+                                       <!--start rating star-->
+                                       <div class="col-md-4 d-flex justify-content-center align-items-center">
+                                         <div class="ratings-wrapper">
+                                          <fieldset class="rating">
+                                            <input type="radio" id="star5" name="rating" value="5"/><label for="star5" class="full" title="Awesome"></label>
+                                            <input type="radio" id="star4.5" name="rating" value="4.5"/><label for="star4.5" class="half"></label>
+                                            <input type="radio" id="star4" name="rating" value="4"/><label for="star4" class="full"></label>
+                                            <input type="radio" id="star3.5" name="rating" value="3.5"/><label for="star3.5" class="half"></label>
+                                            <input type="radio" id="star3" name="rating" value="3"/><label for="star3" class="full"></label>
+                                            <input type="radio" id="star2.5" name="rating" value="2.5"/><label for="star2.5" class="half"></label>
+                                            <input type="radio" id="star2" name="rating" value="2"/><label for="star2" class="full"></label>
+                                            <input type="radio" id="star1.5" name="rating" value="1.5"/><label for="star1.5" class="half"></label>
+                                            <input type="radio" id="star1" name="rating" value="1"/><label for="star1" class="full"></label>
+                                            <input type="radio" id="star0.5" name="rating" value="0.5"/><label for="star0.5" class="half"></label>
+                                          </fieldset>
+                                          <p id="rating-value"></p>
+                                       </div>
+                                       <!--end rating star-->
+                                   </div>
+                                   <!--ingredient / preparation-->
+                                   <div class="row">
+                                     <div class="col-md-12">
+                                       <div class="border p-4">
+                                           <h4 class="text-warning">Ingrédients</h4>
+                                           <ul class="pl-3">
+                                               <li>cheveux d'anges</li>
+                                               <li>l'eau tiède et l'huile</li>
+                                               <li>beurre</li>
+                                               <li>des raisins secs et de la cannelle</li>
+                                               <li>du sucre glace</li>
+                                               <li>amandes concassés grillées (facultatif)</li>
+                                           </ul>
+                                           <h4 class="text-warning">Préparation</h4>
+                                           <ol>
+                                               <li>
+                                                Mettre de l'eau dans un couscoussier et laisser bouillir.                                       
+                                              </li>
+                                              <li>
+                                                Dans un saladier mettre vos cheveux d'anges et l'équivalent d'une cuillère à soupe d'huile. Bien imprégner les cheveux d'anges d'huile. Mettre dans le haut du couscoussier et laisser cuire pendant 20 minutes.                                       
+                                              </li>
+                                              Au bout des 20 minutes, mettre les cheveux d'anges dans le saladier et les imprégnez d'eau tiède, et laissez absorber 5 minutes. Remettre dans le haut du couscoussier à nouveau et laisser cuire 20 minutes.
+                                              <li>
+                                                A nouveau remettre dans le saladier et aspergez à nouveau d'eau, laissez absorber 5 minutes. Cette fois-ci vous rajouter les raisins secs aux cheveux d'anges et vous les mettez à cuire pour une dernière fois sur le couscoussier.                                        
+                                              </li>
+                                              <li>
+                                                Une fois la dernière cuisson à la vapeur terminée, vous mettez les cheveux d'anges avec les raisins secs dans un grand saladier ou une grande assiette. Vous rajoutez du beurre (là aussi à vous de voir combien vous voulez en mettre), ainsi que du sucre glace. Vous mélangez bien le tout.
+                                              </li>
+                                              <li>
+                                                Vous disposez comme vous le voulez dans une grande assiette en monticule (genre une pyramide) au sommet vous mettez les amandes concassées et sur les côtés des lignes de cannelle et de sucre glace ou en petites portions comme moi, et ensuite vous décorez avec de la cannelle, du sucre glace et des amandes concassés grillées.
+                                              </li>
+                                           </ol>
+                                       </div>
+                                     </div>
+                                   </div>
+                                   <div class="row mt-auto">
+                                    <div class="col-md-12">
+                                       <div class="border p-4 text-right d-flex justify-content-end align-items-center">
+                                          <div class="chef-info">
+                                             <p class="small text-muted">Réalisé par :</p>
+                                             <a  style="text-decoration: none;" href="principale.php"><p class=" h6 text-dark">Chef Moha</p></a>
+                                          </div>
+                                          <img src="../login/assets/images/signature1.png" alt="Signature du chef" class="img-fluid signature ml-3" width="60px" height="80px">
+                                       </div>
+                                    </div>
+                                  </div>
+                               </div>   
+                           </div>   
+                       </div>
+                     </div>
+                   <!--fin contenu-->
+                 </div>
+                <!--end partie Seffa-->
+                 </div>
+
+
+
+            </div> 
+            
+            <div class="col">
+             
+            <!--debut partie astuce salade-->
+            
+              <h1 class="text-center text-dark mb-4 text-shadow-dark" ><span class="text-warning"> Astuces</span></h1>
+              
+            <div class="row gx-0 d-flex justify-content-center align-items-center">
+              <div class="card justify-content-center " id="card">
+                <img class="card-imgg" src="../login/assets/images/astuces_salade.jpg" alt="">
+                <div class="card-bodyy">
+                  <h1 class="card-title">Salade</h1>
+                  <ul>
+                    <li>Ingrédients frais</li>
+                    <li>Épluchez les tomates</li>
+                    <li>Hachez finement l'oignon</li>
+                    <li>Ajustez selon votre goût </li>
+                    <li>Servez frais</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+                    
+                    <!--fin partie astuce-->
+                    <!--debut partie astuce briouat-->
+                    <br>
+              <div class="row gx-0 d-flex justify-content-center align-items-center">
+                    <div class="card justify-content-center " id="card">
+                      <img class="card-imgg" src="../login/assets/images/briouat_astuce.jpg" alt="">
+                      <div class="card-bodyy">
+                        <h1 class="card-title">Briouats à la Viande Hachée</h1>
+                        <ul>
+                          <li>Choisissez une viande de qualité </li>
+                          <li>Soyez délicat lors du pliage</li>
+                          <li>Faites frire jusqu'à ce qu'ils soient dorés </li>
+                          <li>Égouttez l'excès d'huile </li>
+                        </ul>
+                      </div>
+                    </div>
+              </div>
+                    <!--fin partie astuce-->
+                    <!--debut partie astuce maakouda-->
+                    <br>
+              <div class="row gx-0 d-flex justify-content-center align-items-center">
+                    <div class="card justify-content-center" id="card">
+                      <img class="card-imgg" src="../login/assets/images/maakouda_astuce.png" alt="">
+                      <div class="card-bodyy">
+                        <h1 class="card-title">Maakouda</h1>
+                        <ul>
+                          <li>Choisissez les bonnes pommes de terre</li>
+                          <li>Écrasez les pommes de terre avec soin</li>
+                          <li>Enrobez les maakoudas de farine</li>
+                          <li>Égouttez l'excès d'huile </li>
+                        </ul>
+                      </div>
+                    </div>
+              </div>    
+                    <!--fin partie astuce-->
+                    <!--debut partie astuce harira-->
+                    <br>
+              <div class="row gx-0 d-flex justify-content-center align-items-center"> 
+                    <div class="card justify-content-center" id="card">
+                      <img class="card-imgg" src="../login/assets/images/harrira_astuce.jpg" alt="">
+                      <div class="card-bodyy">
+                        <h1 class="card-title">Harira</h1>
+                        <ul>
+                          <li>Faites cuire à feu doux</li>
+                          <li>Ajoutez les herbes fraîches à la fin</li>
+                          <li>Utilisez des légumes frais</li>
+                          <li>Utilisez du coulis de tomates </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!--fin partie astuce-->
+              </div>
+                    
+                    <!--debut partie astuce seffa-->
+                    <br>
+              <div class="row gx-0 d-flex justify-content-center align-items-center"> 
+                    <div class="card justify-content-center" id="card">
+                      <img class="card-imgg" src="../login/assets/images/Seffa_astuce.jpg" alt="">
+                      <div class="card-bodyy">
+                        <h1 class="card-title">Seffa</h1>
+                        <ul>
+                          <li>Assurez-vous d'une cuisson parfaite des cheveux d'ange</li>
+                          <li>Ajoutez des ingrédients supplémentaires </li>
+                          <li>Ajoutez du beurre fondu</li>
+                          <li>Mélangez délicatement </li>
+                        </ul>
+                      </div>
+                    </div>
+              </div>     
+                    <!--fin partie astuce-->
+            </div>
+             
+            </div>
+            
+        </div>
+    </div>
+  </section>
+  <!--end historique-->
+  <footer>
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+            <h3>Morrocan F<span>oo</span>d</h3>
+
+            <p class="footer-links">
+                <a href="#">Menu</a>
+                |
+                <a href="#">A propos</a>
+                |
+                <a href="#">Recettes</a>
+                |
+                <a href="#">Blog</a>
+            </p>
+
+            <p class="footer-company-name">Copyright © 2023 <strong>Morrocan Food</strong> All rights reserved</p>
+        </div>
+
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>Casablanca Anfa 20000 </span>
+                    Route Jorf Al asfar</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>FIX: 0535458890</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="anibadoha9@gmail.com">EMR2023@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>A propos du site</span>
+                <strong>Morrocan Food</strong> propose une expérience culinaire unique pour tous 
+                les amateurs de cuisine marocaine.
+            </p>
+            <div class="footer-icons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+</footer>
+
+ 
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <script src="entree.js"></script>
+</body>
+</html>

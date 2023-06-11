@@ -2,7 +2,6 @@
 session_start();
 
 include('connectio.php');
-include('functions.php');
 
 if($_SERVER['REQUEST_METHOD']=='POST'){
     //something was posted
@@ -12,7 +11,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
     $userphone=$_POST['telephone'];
     $password=$_POST['password'];
     
-    if (!empty($usefnam) && !empty($usenam) && !empty($usemail) && !empty($userphone) && !empty($password) && is_numeric($userphone)) {
+    if ($password == $_POST["repeatPassword"] && is_numeric($userphone)) {
         
         // hashing the password
         $password = md5($password);
@@ -20,20 +19,15 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
         
 
         //save to data base
-        $user_id = random_num(20);
-        $query ="insert into users (nom,prenom,password,email,telephone,user_id) values ('$usefnam','$usenam','$password','$usemail','$userphone','$user_id')";
+        $query ="insert into users (nom,prenom,password,email,telephone) values ('$usefnam','$usenam','$password','$usemail','$userphone')";
         
         $result=mysqli_query($con,$query); 
-        if ($result1 !== 0) {
-            header("Location: signup.php?success=Your account has been created successfully...");
-         exit();
+        if ($result) {
+            header("Location: login.php");  
        }else {
-               header("Location: signup.php?error=unknown error occurred!");
-            exit();
+               header("Location: signup.php?error=unknown");
        }
 
-        //header("Location: dessert.php");
-        //die;
     
     }
     else {
@@ -43,7 +37,6 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,7 +50,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
      <!--lien pour acceder au fichier CSS-->
-     <link rel="stylesheet" href="./sign_up.css">
+     <link rel="stylesheet" href="../login/assets/css/sign_up.css">
     <title>MRF</title>
 </head>
 <body>
@@ -71,7 +64,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                         <header>
                             <div class="row-md-1" >
                                 <div class="col-md-8" >
-                                    <img src="../assets/images/logojdid.png.png" alt="LOGO " width="60" height="45" >
+                                    <img src="../login/assets/images/logojdid.png.png" alt="LOGO " width="60" height="45" >
                                 </div>
                                 <div class="col-md-8">
                                     <h2 class="text-dark fw-bolder text-center fs-4 mb-2">Morrocan F<span class="text-warning">oo</span>d</h2>

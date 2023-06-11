@@ -1,3 +1,54 @@
+<?php
+session_start();
+
+include('connectio.php');
+include('functions.php');
+
+if(isset( $_SERVER['REQUEST_METHOD']) && $_SERVER['REQUEST_METHOD']=="POST"){
+    //something was posted
+    $usefnam=$_POST['nom'];
+   
+    $usemail=$_POST['email'];
+    $userphone=$_POST['telephone'];
+   
+    $userplat=$_POST['plat'];
+    $useradresse = $_POST['adresse'];
+  
+
+    
+    if (!empty($usefnam)  && !empty($usemail) && !empty($userphone) && !empty($userplat) && !empty($useradresse)) {
+        
+        
+
+        
+
+        //save to data base
+        $query ="insert into collaboration (nom,email,telephone,plat,adresse) values ('$usefnam','$usemail','$userphone','$userplat','$useradresse')";
+        
+        $result=mysqli_query($con,$query);
+        if ($result1 !== 0) {
+            header("Location: menu.php?success=Your informations has been send successfully...");
+         exit();
+       }else {
+               header("Location: menu.php?error=unknown error occurred!");
+            exit();
+       }
+
+        //header("Location: dessert.php");
+        //die;
+    
+    }
+    else {
+        echo "s'il vous plait entrer des informations valide !";
+    }
+}
+else {
+  echo "request vide";
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,14 +60,14 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="../login/assets/css/projetcss.css">
-  <title>projet</title>
+  <title>MRF</title>
 </head>
 <body>
    <!--navclass-->
    <nav class="navbar navbar-expand-lg bg-body-tertiary py-6 fixed-top">
     <div class="container">
       <!--logo-->
-      <a class="navbar-brand"  href="#">
+      <a class="navbar-brand"  href="principale.php">
         <img src="../login/assets/images/logojdid.png.png" alt="LOGO " width="45" height="39" >
         Morrocan F<span id="logo_span">oo</span>d
       </a>
@@ -27,7 +78,7 @@
         <ul class="navbar-nav me-5 mb-2 mb-lg-0">
           <!--home-->
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Acceuille</a>
+            <a class="nav-link active" aria-current="page" href="principale.php">Acceuille</a>
           </li>
           <!--plat-->
           <li class="nav-item dropdown">
@@ -35,9 +86,9 @@
               Plat
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Entrée</a></li>
-              <li><a class="dropdown-item" href="#">Desser</a></li>
-              <li><a class="dropdown-item" href="#">Plat traditionnel</a></li>
+              <li><a class="dropdown-item" href="entree.html">Entrée Marocaine</a></li>
+              <li><a class="dropdown-item" href="dessert.html">Dessert</a></li>
+              <li><a class="dropdown-item" href="Plat Traditionnel.html">Plat traditionnel</a></li>
             </ul>
           </li>
           <!--espace-->
@@ -46,24 +97,24 @@
               Espace Utilisateur
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Vos recette</a></li>
-              <li><a class="dropdown-item" href="#">Vos commentaires</a></li>
+              <li><a class="dropdown-item" href="projet.php">Vos recettes</a></li>
+              <li><a class="dropdown-item" href="commentaire.php">Vos commentaires</a></li>
             </ul>
         </li>
       </ul>
         <!--recherche-->
         <form class="d-flex">
           <input class="form1-control mr-2" id="search" type="search" placeholder="Search" aria-label="Search">
-          <i class="bi bi-search"></i>
+          <a href="" style="color:black;"><i class="bi bi-search" ></i></a>
           <div class="dropdown">
             <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-              <img src="../login/assets/images/user.jfif" alt="" width="32" height="32" class="rounded-circle me-2">
+              <img src="../login/assets/images/userr.jfif" alt="" width="32" height="32" class="rounded-circle me-2">
             </a>
             <ul class="dropdown-menu dropdown-menu-dark text-small shadow" >
-              <li><a class="dropdown-item" href="#">votre Profile</a></li>
-              <li><a class="dropdown-item" href="#">Paramètres</a></li>
+              <li><a class="dropdown-item" href="profile.php">votre Profile</a></li>
+              <li><a class="dropdown-item" href="profile.php">Paramètres</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Se déconnecter</a></li>
+              <li><a class="dropdown-item" href="logout.php">Se déconnecter</a></li>
             </ul>
           </div>
         </div> 
@@ -226,7 +277,7 @@
                 <h3>Les entrées Marocaines</h3> 
                 <p>Les entrées marocaines sont une variété de petits plats salés qui sont servis au début d'un repas marocain traditionnel.</p>
                 <div class="link">
-                  <a href="#">Detaille</a>
+                  <a href="entree.html">Detaille</a>
                 </div>
                 <!--fin div link-->
               </div>
@@ -247,7 +298,7 @@
                   <h3>Les plats traditionnels</h3> 
                   <p>Les plats traditionnels marocains sont un mélange savoureux de différentes épices et ingrédients qui créent une explosion de saveurs en bouche. </p>
                   <div class="link">
-                    <a href="#">Detaille</a>
+                    <a href="Plat Traditionnel.html">Detaille</a>
                   </div>
                   <!--fin div link-->
                 </div>
@@ -268,7 +319,7 @@
                     <h3>Les desserts Marocains</h3> 
                     <p>Les desserts marocains sont un délice pour les papilles avec leur mélange de saveurs sucrées et épicées. </p>
                     <div class="link">
-                      <a href="#">Detaille</a>
+                      <a href="dessert.html">Detaille</a>
                     </div>
                     <!--fin div link-->
                   </div>

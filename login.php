@@ -1,6 +1,6 @@
 <?php 
-
 session_start();
+
 
 	include("connectio.php");
 	include("functions.php");
@@ -11,39 +11,25 @@ session_start();
 		//something was posted
 		$usefnam = $_POST['nom'];
 		$password = $_POST['password'];
+    echo "yes";
 
-		if(!empty($usefnam) && !empty($password) && !is_numeric($usefnam))
-		{
 
 			//read from database
 			$query = "select * from users where nom = '$usefnam' limit 1";
 			$result = mysqli_query($con, $query);
-
-			if($result)
-			{
-				if($result && mysqli_num_rows($result) > 0)
+				if(mysqli_num_rows($result) > 0)
 				{
-
-					$user_data = mysqli_fetch_assoc($result);
-					
-					if($user_data['password'] === $password)
-					{
-
-						$_SESSION['user_id'] = $user_data['user_id'];
-						header("Location: index.php");
-						die;
-					}
+          echo"yes";
+          $user_data = mysqli_fetch_assoc($result);
+					$_SESSION['user_id'] = $user_data['id'];
+          header('Location: principale.php');
 				}
-			}
-			
-			header("Location: index.php");
-		}else
-		{
+
 			echo "wrong username or password!";
-		}
 	}
 
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">

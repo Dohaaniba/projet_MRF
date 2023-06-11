@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Font Awesome -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <!--lien pour utuliser bootstrap-->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
@@ -19,18 +22,18 @@
   <nav class="navbar navbar-default navbar-expand-lg bg-body-tertiary py-6 fixed-top">
     <div class="container">
       <!--logo-->
-      <a class="navbar-brand"  href="#">
+      <a class="navbar-brand"  href="principale.php">
         <img src="../login/assets/images/logojdid.png.png" alt="LOGO " width="45" height="39" >
         Morrocan F<span id="logo_span">oo</span>d
       </a>
       <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="navbar-collapse justify-content-end collapse" id="navbarSupportedContent" style="">
+      <div class="navbar-collapse justify-content-end collapse" id="navbarSupportedContent" >
         <ul class="navbar-nav me-5 mb-2 mb-lg-0">
           <!--home-->
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Acceuille</a>
+            <a class="nav-link active" aria-current="page" href="principale.php">Acceuille</a>
           </li>
           <!--plat-->
           <li class="nav-item dropdown">
@@ -38,9 +41,9 @@
               Plat
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Entrée</a></li>
-              <li><a class="dropdown-item" href="#">Desser</a></li>
-              <li><a class="dropdown-item" href="#">Plat traditionnel</a></li>
+              <li><a class="dropdown-item" href="entree.html">Entrée Marocaine</a></li>
+              <li><a class="dropdown-item" href="dessert.html">Dessert</a></li>
+              <li><a class="dropdown-item" href="Plat Traditionnel.html">Plat traditionnel</a></li>
             </ul>
           </li>
           <!--espace-->
@@ -49,8 +52,8 @@
               Espace Utilisateur
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Vos recette</a></li>
-              <li><a class="dropdown-item" href="#">Vos commentaires</a></li>
+              <li><a class="dropdown-item" href="projet.php">Vos recettes</a></li>
+              <li><a class="dropdown-item" href="commentaire.php">Vos commentaires</a></li>
              
             </ul>
         </li>
@@ -58,16 +61,16 @@
         <!--recherche-->
         <form class="d-flex">
           <input class="form-control mr-2" id="search" type="search" placeholder="Search" aria-label="Search">
-          <i class="bi bi-search"></i>
+         <i class="bi bi-search"></i>
           <div class="dropdown">
             <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
               <img src="../login/assets/images/userr.jfif" alt="" width="32" height="32" class="rounded-circle me-2" >
             </a>
-            <ul class="dropdown-menu dropdown-menu-dark text-small shadow" style="">
-              <li><a class="dropdown-item" href="#">votre Profile</a></li>
-              <li><a class="dropdown-item" href="#">Paramètres</a></li>
+            <ul class="dropdown-menu dropdown-menu-dark text-small shadow" >
+              <li><a class="dropdown-item" href="profile.php">votre Profile</a></li>
+              <li><a class="dropdown-item" href="profile.php">Paramètres</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#">Se déconnecter</a></li>
+              <li><a class="dropdown-item" href="logout.php">Se déconnecter</a></li>
             </ul>
           </div>
         </div> 
@@ -237,7 +240,7 @@
                                             
                                             <li>
                                              Après quelques minutes de cuisson (15 minutes environ), retirer le couscous et placer dans un grand plat. <br>
-                                            Astuce : arroser votre couscous d'une petite louchette de bouillon et mélanger, il va ainsi s'imprégner de toutes les saveurs.
+                                            
                                             </li>
                                             
                                             <li>
@@ -250,6 +253,17 @@
                                             </li>
                                         </ol>
                                     </div>
+                                  </div>
+                                </div>
+                                <div class="row mt-auto">
+                                  <div class="col-md-12">
+                                     <div class="border p-4 text-right d-flex justify-content-end align-items-center">
+                                        <div class="chef-info">
+                                           <p class="small text-muted">Réalisé par :</p>
+                                           <a  style="text-decoration: none;" href="principale.php"><p class=" h6 text-dark">Chef Choumicha</p></a>
+                                        </div>
+                                        <img src="../login/assets/images/signature1.png" alt="Signature du chef" class="img-fluid signature ml-3" width="60px" height="80px">
+                                     </div>
                                   </div>
                                 </div>
                             </div>   
@@ -372,6 +386,17 @@
                                       </div>
                                   </div>     
                                 </div>
+                                <div class="row mt-auto">
+                                  <div class="col-md-12">
+                                     <div class="border p-4 text-right d-flex justify-content-end align-items-center">
+                                        <div class="chef-info">
+                                           <p class="small text-muted">Réalisé par :</p>
+                                           <a  style="text-decoration: none;" href="principale.php"><p class="h6 text-dark">Chef Moha</p></a>
+                                        </div>
+                                        <img src="../login/assets/images/signature1.png" alt="Signature du chef" class="img-fluid signature ml-3" width="60px" height="80px">
+                                     </div>
+                                  </div>
+                                </div>
                             </div>   
                         </div>   
                     </div>
@@ -400,7 +425,7 @@
                             <div class="col">
                               <!--titre-->
                                 <div class="row">
-                                    <h3 class="text-center text-dark mb-4"><span class="text-warning">Bastila au poulet</span></h3>
+                                    <h3 class="text-center text-dark mb-4"><span class="text-warning">Pastilla au poulet</span></h3>
                                 </div>
                                 <!--information generale-->
                                 <div class="row">
@@ -490,6 +515,17 @@
                                             </li>
                                         </ol>
                                     </div>
+                                  </div>
+                                </div>
+                                <div class="row mt-auto">
+                                  <div class="col-md-12">
+                                     <div class="border p-4 text-right d-flex justify-content-end align-items-center">
+                                        <div class="chef-info">
+                                           <p class="small text-muted">Réalisé par :</p>
+                                           <a  style="text-decoration: none;" href="principale.php"><p class=" h6 text-dark">Chef Khadija</p></a>
+                                        </div>
+                                        <img src="../login/assets/images/signature1.png" alt="Signature du chef" class="img-fluid signature ml-3" width="60px" height="80px">
+                                     </div>
                                   </div>
                                 </div>
                             </div>   
@@ -609,6 +645,17 @@
                                      </div>
                                    </div>
                                  </div>
+                                 <div class="row mt-auto">
+                                  <div class="col-md-12">
+                                     <div class="border p-4 text-right d-flex justify-content-end align-items-center">
+                                        <div class="chef-info">
+                                           <p class="small text-muted">Réalisé par :</p>
+                                           <a  style="text-decoration: none;" href="principale.php"><p class=" h6 text-dark">Chef Choumicha</p></a>
+                                        </div>
+                                        <img src="../login/assets/images/signature1.png" alt="Signature du chef" class="img-fluid signature ml-3" width="60px" height="80px">
+                                     </div>
+                                  </div>
+                                </div>
                              </div>   
                          </div>   
                      </div>
@@ -624,7 +671,7 @@
                    <!--image-->
                      <div class="col-md-4">
                        <img src="../login/assets/images/Les-ingredients-du-tajine-traditionnel-aux-pruneaux-et-aux-amandes.jpg" class="card-img-top" alt="">
-                       <img src="../login/assets/images/images/306301.jpg" class="card-img-top" alt="">
+                       <img src="../login/assets/images/306301.jpg" class="card-img-top" alt="">
                        <img src="../login/assets/images/2.jpg" class="card-img-top" alt="">
                        <img src="../login/assets/images/01-tajine-d-agneau-aux-pruneaux-et-amandes4.jpg" class="card-img-top" alt="">
                        <img src="../login/assets/images/tagine5.jpg "class="card-img-top" alt="">
@@ -727,6 +774,21 @@
                                        </div>
                                    </div>     
                                  </div>
+                                 <!--chef-->
+                 <!--chef-->
+<!--chef-->
+<div class="row mt-auto">
+  <div class="col-md-12">
+     <div class="border p-4 text-right d-flex justify-content-end align-items-center">
+        <div class="chef-info">
+           <p class="small text-muted">Réalisé par :</p>
+           <a  style="text-decoration: none;" href="principale.php"><p class=" h6 text-dark">Chef Moha</p></a>
+        </div>
+        <img src="../login/assets/images/signature1.png" alt="Signature du chef" class="img-fluid signature ml-3" width="60px" height="80px">
+     </div>
+  </div>
+</div>
+
                              </div>   
                          </div>   
                      </div>
@@ -734,12 +796,154 @@
                  <!--fin contenu-->
              </div>
               <!--end partie rfissa-->
-             </div> 
+             </div>
+             <div class="col">
+             
+              <!--debut partie astuce couscous-->
+              
+                <h1 class="text-center text-dark mb-4 text-shadow-dark" style="font-family: 'Great Vibes', cursive; font-size: 100px; text-shadow: 2px 5px 15px #ffc107;"><span class="text-warning"> Astuces</span></h1>
+                
+              <div class="row gx-0 d-flex justify-content-center align-items-center">
+                <div class="card justify-content-center " id="card">
+                  <img class="card-imgg" src="../login/assets/images/couscoustfaya.jpg" alt="">
+                  <div class="card-bodyy">
+                    <h1 class="card-title">Couscous Marocain</h1>
+                    <ul>
+                      <li>Cuisez la semoule à la vapeur pendant environ 30 minutes pour obtenir une texture légère et aérée.</li>
+                      <br>
+                      <li> arroser votre couscous d'une petite louchette de bouillon et mélanger, il va ainsi s'imprégner de toutes les saveurs. </li> <br>
+                      <li>Faites cuire les légumes et la viande dans le bouillon pendant environ une heure jusqu'à ce qu'ils soient tendres et savoureux.</li>
+                      <br>
+                      <li>Présentez le couscous dans un grand plat de service et ajoutez des garnitures comme des raisins secs, des amandes grillées ou des oignons caramélisés pour plus de saveur.</li>
+                      
+                    </ul>
+                  </div>
+                </div>
+              </div>
+                      
+                      <!--fin partie astuce-->
+                      <!--debut partie astuce Rfissa-->
+                      <br>
+                <div class="row gx-0 d-flex justify-content-center align-items-center">
+                      <div class="card justify-content-center " id="card">
+                        <img class="card-imgg" src="../login/assets/images/rfissa1.jpg" alt="">
+                        <div class="card-bodyy">
+                          <h1 class="card-title">Rfissa</h1>
+                          <ul>
+                            <li>Faites revenir des oignons dans de l'huile d'olive jusqu'à ce qu'ils deviennent dorés. </li> <br>
+                            <li>Versez suffisamment d'eau pour couvrir le poulet</li> <br>
+                            <li>Mélangez délicatement pour enrober les msemmen du bouillon. </li>
+                            
+                          </ul>
+                        </div>
+                      </div>
+                </div>
+                      <!--fin partie astuce-->
+                      <!--debut partie astuce maakouda-->
+                      <br>
+                <div class="row gx-0 d-flex justify-content-center align-items-center">
+                      <div class="card justify-content-center" id="card">
+                        <img class="card-imgg" src="../login/assets/images/pastilla.png" alt="">
+                        <div class="card-bodyy">
+                          <h1 class="card-title">Pastilla au poulet</h1>
+                          <ul>
+                            <li>Badigeonnez légèrement des feuilles de brick avec du beurre fondu.</li> <br>
+                            <li>Repliez les bords des feuilles de brick vers l'intérieur.</li> <br>
+                            <li>Badigeonnez la surface de la pastilla avec du beurre fondu.</li> <br>
+                            <li>Faites cuire au four jusqu'à ce que la pastilla soit dorée et croustillante. </li>
+                          </ul>
+                        </div>
+                      </div>
+                </div>    
+                      <!--fin partie astuce-->
+                      <!--debut partie astuce seffa medfouna-->
+                      <br>
+                <div class="row gx-0 d-flex justify-content-center align-items-center"> 
+                      <div class="card justify-content-center" id="card">
+                        <img class="card-imgg" src="../login/assets/images/seffa.jpg" alt="">
+                        <div class="card-bodyy">
+                          <h1 class="card-title">Seffa el medfouna</h1>
+                          <ul>
+                            <li>Cuisez des vermicelles jusqu'à ce qu'ils soient al dente.</li> <br>
+                            <li>Dans un plat de service, disposez les vermicelles cuits et versez la sauce par-dessus. Mélangez délicatement.</li> <br>
+                            <li>Garnissez avec des raisins secs, des amandes grillées et de la cannelle en poudre</li>
+                            
+                          </ul>
+                        </div>
+                      </div>
+                      <!--fin partie astuce-->
+                </div>
+                      
+                      <!--debut partie astuce seffa-->
+                      <br>
+                <div class="row gx-0 d-flex justify-content-center align-items-center"> 
+                      <div class="card justify-content-center" id="card">
+                        <img class="card-imgg" src="../login/assets/images/tagineprunneaux.jpg" alt="">
+                        <div class="card-bodyy">
+                          <h1 class="card-title">Tajine d'Agneau aux Pruneaux et Amandes</h1>
+                          <ul>
+                            <li>Réhydratez des pruneaux dans de l'eau tiède pendant 15 minutes.</li> <br>
+                            <li>Faites griller des amandes effilées dans une poêle. </li> <br>
+                            <li>Ajoutez les amandes grillées dans la cocotte. Mélangez.</li>
+                           
+                          </ul>
+                        </div>
+                      </div>
+                </div>   
         </div>
     </div>
   </section>
   <!--end historique-->
-
+  <footer>
+    <footer class="footer-distributed">
+  
+        <div class="footer-left">
+            <h3>Morrocan F<span>oo</span>d</h3>
+  
+            <p class="footer-links">
+                <a href="#">Menu</a>
+                |
+                <a href="#">A propos</a>
+                |
+                <a href="#">Recettes</a>
+                |
+                <a href="#">Blog</a>
+            </p>
+  
+            <p class="footer-company-name">Copyright © 2023 <strong>Morrocan Food</strong> All rights reserved</p>
+        </div>
+  
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>Casablanca Anfa 20000 </span>
+                    Route Jorf Al asfar</p>
+            </div>
+  
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>FIX: 0535458890</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="anibadoha9@gmail.com">EMR2023@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>A propos du site</span>
+                <strong>Morrocan Food</strong> propose une expérience culinaire unique pour tous 
+                les amateurs de cuisine marocaine.
+            </p>
+            <div class="footer-icons">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+  </footer>
  
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>

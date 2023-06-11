@@ -1,91 +1,118 @@
-/*start general rules*/
-/*end general rules*/
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+/*start general rules*/
 body{
-  background-color: rgba(245, 224, 160, 0.368);
+    background-color: rgba(245, 224, 160, 0.368);
+    
 }
-
 .partie{
-  font-family: 'Playfair Display', serif;
- font-size: 15px; 
- font-weight: 600;
+    font-family: 'Playfair Display', serif;
+   font-size: 15px; 
+   font-weight: 600;
 }
 .text-center{
-  font-family: 'Playfair Display', serif;
- font-size: 50px;
+    font-family: 'Playfair Display', serif;
+   font-size: 50px;
 }
+/*end general rules*/
+
 
 /*start  navbar*/
 #logo_span{
-  color: #ffc107;
-}
-.bi.bi-search{
-  margin: 9px;
-}
-/*profile*/
-.dropdown-menu {
-  --bs-dropdown-zindex: 1000;
-  --bs-dropdown-min-width: 10rem;
-  --bs-dropdown-padding-x: 0;
-  --bs-dropdown-padding-y: 0.5rem;
-  --bs-dropdown-spacer: 0.125rem;
-  --bs-dropdown-font-size: 1rem;
-  --bs-dropdown-link-color: #000000;
-  --bs-dropdown-bg: #e0a903;}
-.btn-secondary {
-      --bs-btn-color: #000;
-      --bs-btn-bg: #e0a903;
-      --bs-btn-border-color: #040404;}
-
-
-/*end navbar*/
+    color: #ffc107;
+  }
+  .bi.bi-search{
+    margin: 9px;
+  }
+  /*profile*/
+  .dropdown-menu {
+    --bs-dropdown-zindex: 1000;
+    --bs-dropdown-min-width: 10rem;
+    --bs-dropdown-padding-x: 0;
+    --bs-dropdown-padding-y: 0.5rem;
+    --bs-dropdown-spacer: 0.125rem;
+    --bs-dropdown-font-size: 1rem;
+    --bs-dropdown-link-color: #000000;
+    --bs-dropdown-bg: #e0a903;}
+  .btn-secondary {
+        --bs-btn-color: #000;
+        --bs-btn-bg: #e0a903;
+        --bs-btn-border-color: #040404;}
+  
+  
+  /*end navbar*/
 
 /*start recette*/
-
+.card-img-top{
+    height: 100%;
+    width: 100%;
+}
 
 .card-title{
-  color: #ffc107;
-  font-style: italic;
+    color: #ffc107;
+    font-style: italic;
 }
 
 .card{
-  width:   90%;
-  margin: 10px;
+    width:   90%;
+    margin: 10px;
 }
 
 /*end recette*/
 
 /*start rating stars*/
 .ratings-wrapper{
-  display: inline-block;
-  margin-bottom: 5px;
-}
-.ratings{
-  display: flex;
-}
-.ratings span{
-  cursor: pointer;
-  transition: color .2s;
-  font-size: 20px;
-}
-.ratings span:hover{
-  color: orange;
-}
-.ratings span:hover ~ span{
-  color: orange;
-}
-.ratings span[data-clicked]{
-  color: orange;
-}
-.ratings span[data-clicked] ~ span{
-  color: orange;
-}
-/*end rating stars*/
+    display: inline-block;
+    margin-bottom: 5px;
+ }
+ .ratings{
+    display: flex;
+ }
+ .ratings span{
+    cursor: pointer;
+    transition: color .2s;
+    font-size: 20px;
+ }
+ .ratings span:hover{
+    color: orange;
+ }
+ .ratings span:hover ~ span{
+    color: orange;
+ }
+ .ratings span[data-clicked]{
+    color: orange;
+ }
+ .ratings span[data-clicked] ~ span{
+    color: orange;
+ }
+ /*end rating stars*/
+
+
+
+ /*side images*/
+ .side_img{
+    padding: 10px;
+    
+ }
+
+
+ /*coursel*/
+ #carouselExampleIndicators .carousel-inner{
+    height: 100%;
+ }
+
+ /* div de rectte */
 #row_id{
    
-  box-shadow: 20px 15px 35px #ffc107;
-  border-radius: 2%;
+   box-shadow: 20px 15px 35px #ffc107;
+   border-radius: 2%;
 }
+
+#img_recette{
+   border-radius: 2% 0 0 2%;
+ 
+   
+}
+
 /* rating stars*/
 .rating{
 	border: none;
@@ -132,67 +159,70 @@ body{
 	color: #ffc107;
 }
 
-  /* start   astuce*/
+
+
+/* start   astuce*/
 
 
 #image{
-  width: 60%;
-  position: relative;
+   width: 60%;
+   position: relative;
 }
 
 
 
 
 #card{
-  width: 600px;
-  height: 350px;
-  border-radius: 20px;
-  overflow: hidden;
-  border: 8px solid #fff;
-  position: relative;
+   width: 600px;
+   height: 350px;
+   border-radius: 20px;
+   overflow: hidden;
+   border: 8px solid #fff;
+   position: relative;
 }
 
 .card-imgg{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 15px;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   border-radius: 15px;
 }
 
 .card-bodyy{
-  width: 100%;
-  height: 100%;
-  top: 0;
-  right: -100%;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   right: -100%;
 
-  position: absolute;
-  background-color: #1a343d59;
-  backdrop-filter: blur(5px);
-  border-radius: 15px;
-  color: #fff;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  transition: 2s;
+   position: absolute;
+   background-color: #1a343d59;
+   backdrop-filter: blur(5px);
+   border-radius: 15px;
+   color: #fff;
+   padding: 30px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   transition: 2s;
 
 }
 #card:hover .card-bodyy{
-  right: 0;
+   right: 0;
 } 
 
 .card-title{
-  text-transform: uppercase;
-  font-size: 30px;
-  font-weight: 500;
+   text-transform: uppercase;
+   font-size: 30px;
+   font-weight: 500;
 } 
 
 /*end astuce*/
 
+
   /* Start footer */
   /* The footer is fixed to the bottom of the page */
 
-  footer {
+footer {
     position: fixed;
     bottom: 0;
   }
@@ -364,4 +394,3 @@ body{
     }
   }       
   /* End footer responsivitte */
- 

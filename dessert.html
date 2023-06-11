@@ -1,0 +1,852 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--web fonts-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp"rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--lien pour utuliser bootstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--lien pour acceder au fichier CSS-->
+  <link rel="stylesheet" href="../login/assets/css/entree.css">
+  <!--titre de la page web-->
+  <title>MRF</title>
+</head>
+<body>
+  <!--navclass-->
+  <nav class="navbar navbar-default navbar-expand-lg bg-body-tertiary py-6 fixed-top">
+
+    <div class="container">
+      <!--logo-->
+      <a class="navbar-brand" href="principale.php">
+        <img src="../login/assets/images/logojdid.png.png" alt="LOGO " width="45" height="39">
+        Morrocan F<span id="logo_span">oo</span>d
+      </a>
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse justify-content-end collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-5 mb-2 mb-lg-0">
+          <!--home-->
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="principale.php">Acceuille</a>
+          </li>
+          <!--plat-->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle px-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Plat
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="entree.html">Entrée Marocaine</a></li>
+              <li><a class="dropdown-item" href="dessert.html">Dessert</a></li>
+              <li><a class="dropdown-item" href="Plat Traditionnel.html">Plat traditionnel</a></li>
+            </ul>
+          </li>
+          <!--espace-->
+          <li class="nav-item dropdown">
+
+            <a class="nav-link dropdown-toggle px-3" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Espace Utilisateur
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="projet.php">Vos recettes</a></li>
+              <li><a class="dropdown-item" href="commentaire.php">Vos commentaires</a></li>
+
+            </ul>
+          </li>
+        </ul>
+        <!--recherche-->
+        <form class="d-flex">
+          <input class="form-control mr-2" id="search" type="search" placeholder="Search" aria-label="Search">
+          <i class="bi bi-search"></i>
+          <div class="dropdown">
+            <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="../login/assets/images/userr.jfif" alt="" width="32" height="32" class="rounded-circle me-2">
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
+              <li><a class="dropdown-item" href="profil.php">votre Profile</a></li>
+              <li><a class="dropdown-item" href="profile.php">Paramètres</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="logout.php">Se déconnecter</a></li>
+            </ul>
+          </div>
+      </div>
+      </form>
+    </div>
+
+    </div>
+  </nav>
+  <!--end nav class-->
+
+ 
+
+  <!--partie historique des plats marocains-->
+  <section class="partie py-5">
+    <div class="container">
+        <h1 class="text-center text-dark mb-4 mt-5" ><span class="text-warning"> Dessert Marocaine</span></h1>
+        <div class="col">
+            <div class="row gx-0"  >
+             <!--partie baghrir-->
+             <div class="card" id="row_id">
+                <div class="row ">
+                  <!--image-->
+                    <div class="col-md-4">
+                        <img src="../login/assets/images/baghrir.jpg" class="card-img-top" alt="...">
+                    </div>
+                    <!--contenu-->
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <div class="col">
+                              <!--titre-->
+                                <div class="row">
+                                    <h3 class="text-center text-dark mb-4"><span class="text-warning">Crèpe marocaine milles trous</span></h3>
+                                </div>
+                                <!--information generale-->
+                                <div class="row">
+                                    <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                        <span class="material-icons-sharp text-warning" >
+                                            alarm
+                                            </span>
+                                            5min
+                                    </div>
+                                    <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                        <span class="material-icons-sharp text-warning">
+                                          local_fire_department
+                                          </span>
+                                           15min
+                                    </div>
+                                    <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                        <span class="material-icons-sharp text-warning">
+                                            signal_cellular_alt
+                                            </span>
+                                            facile
+                                    </div>
+                                    <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                        <span class="material-icons-sharp text-warning">
+                                            person
+                                            </span>
+                                            15
+                                    </div>
+                                    <!--start rating star-->
+                                    <div class="col-md-4 d-flex justify-content-center align-items-center">
+                                      <div class="ratings-wrapper">
+                                        <div data-productid="39" class="ratings">
+                                           <span data-rating="5">★</span>
+                                           <span data-rating="4">★</span>
+                                           <span data-rating="3">★</span>
+                                           <span data-rating="2">★</span>
+                                           <span data-rating="1">★</span>
+                                        </div>
+                                     </div>
+                                    </div>
+                                    <!--end rating star-->
+                                </div>
+                                <!--ingredient / preparation-->
+                                <div class="row" >
+                                  <div class="col-md-12">
+                                    <div class="border p-4">
+                                        <h4 class="text-warning">Ingrédients</h4>
+                                        <ul class="pl-3">
+                                            <li>2 tasses de semoule extra fine</li>
+                                            <li>1 tasse de farine</li>
+                                            <li>1 sachet de levure chimique</li>
+                                            <li>4 tasses d’eau tiède</li>
+                                            <li>1 cas de levure boulangère</li>
+                                        </ul>
+                                        <h4 class="text-warning">Préparation</h4>
+                                        <ol>
+                                            <li>
+                                                Mélanger tous les ingrédients ensemble et mixer quelques minutes.
+                                            </li>
+                                            <li>
+                                                Quand la pâte est bien liquide et sans grumeaux, couvrir de papier film et laisser reposer 30 min à 1h
+                                            </li>
+                                            <li>
+                                                Faire chauffer une poêle anti adhésive sur feu doux et poser une louche de pâte 
+                                            </li>
+                                            <li>
+                                                Ces crêpes se chauffent seulement d’un côté ne les retourner surtout pas. Badigeonner de beurre fondu et saupoudrer de sucre.
+                                            </li>
+                                        </ol>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>   
+                        </div>   
+                    </div>
+                </div>
+                <!--fin contenu-->
+            </div>
+             <!--end partie baghrir-->
+            </div>
+
+
+            
+            <div class="row gx-0">
+             <!--partie ghriba-->
+              <div class="card" id="row_id">
+                <div class="row ">
+                  <!--image-->
+                    <div class="col-md-4">
+                      <img src="../login/assets/images/ghriba.jpg" class="card-img-top" alt="">
+                    </div>
+                    <!--contenu-->
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <div class="col">
+                              <!--titre-->
+                                <div class="row">
+                                    <h3 class="text-center text-dark mb-4"><span class="text-warning">Ghriba aux noix de coco</span></h3>
+                                </div>
+                                <!--information generale-->
+                                <div class="row">
+                                    <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                        <span class="material-icons-sharp text-warning">
+                                            alarm
+                                            </span>
+                                            20min
+                                    </div>
+                                    <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                      <span class="material-icons-sharp text-warning">
+                                        local_fire_department
+                                        </span>
+                                         15min
+                                    </div>
+                                    <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                        <span class="material-icons-sharp text-warning">
+                                            signal_cellular_alt
+                                            </span>
+                                            facile
+                                    </div>
+                                    <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                        <span class="material-icons-sharp text-warning">
+                                            person
+                                            </span>
+                                            10
+                                    </div>
+                                    <!--start rating star-->
+                                    <div class="col-md-4 d-flex justify-content-center align-items-center">
+                                      <div class="ratings-wrapper">
+                                        <div data-productid="39" class="ratings">
+                                          <span data-rating="5">★</span>
+                                          <span data-rating="4">★</span>
+                                          <span data-rating="3">★</span>
+                                          <span data-rating="2">★</span>
+                                          <span data-rating="1">★</span>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <!--end rating star-->
+                                </div>
+                                <!--ingredient / preparation-->
+                                <div class="row">
+                                  <div class="col-md-12">
+                                    <div class="border p-4">
+                                        <h4 class="text-warning">Ingrédients</h4>
+                                        <ul class="pl-3">
+                                            <li>500 g de noix de coco râpée</li>
+                                            <li>350 g de sucre glace</li>
+                                            <li>Zeste d'un citron</li>
+                                            <li>5 oeufs</li>
+                                            <li>200 g semoule fine</li>
+                                            <li>1/2 verre d'huile</li>
+                                            <li>1/2 verre de beurre fondu</li>
+                                            <li>1 sachet de levure chimique</li>
+                                        </ul>
+                                        <h4 class="text-warning">Préparation</h4>
+                                        <ol>
+                                            <li>
+                                                Mélangez tout les ingrédients dans un grand saladier, sauf la levure chimique.
+                                            </li>
+                                            <li>
+                                                Travaillez énergétiquement jusqu'à ce que la pâte soit bien homogène.
+                                                <br>
+                                                Couvrir avec un film alimentaire et conservez une nuit dans le frigo
+                                            </li>
+                                            <li>
+                                                Le lendemain, incorporez la levure chimique au mélange et préchauffez le four à 180°.
+                                            </li>
+                                            <li>
+                                                Humectez-vous les mains avec un peu d'eau de fleur d'oranger, prélevez une grosse noix de pâte et formez une boule.
+                                            </li>
+                                            <li>
+                                                Badigeonnez le dessus de la boule avec de l'eau de fleur d'oranger et aplatissez-la légèrement sur un fond de sucre glace.
+                                            </li>
+                                            <li>
+                                                Posez la boule dans une plaque habillée de papier sulfurisé.
+                                                <br>
+                                                Faites la même chose avec le reste de la pâte et enfournez environ 15 minutes.
+                                            </li>
+                                        </ol>
+                                      </div>
+                                  </div>     
+                                </div>
+                                <div class="row mt-auto">
+                                    <div class="col-md-12">
+                                       <div class="border p-4 text-right d-flex justify-content-end align-items-center">
+                                          <div class="chef-info">
+                                             <p class="small text-muted">Réalisé par :</p>
+                                             <a  style="text-decoration: none;" href="principale.php"><p class=" h6 text-dark">Chef Choumicha</p></a>
+                                          </div>
+                                          <img src="../login/assets/images/signature1.png" alt="Signature du chef" class="img-fluid signature ml-3" width="60px" height="80px">
+                                       </div>
+                                    </div>
+                                  </div>
+                            </div>   
+                        </div>   
+                    </div>
+                </div>
+                <!--fin contenu-->
+            </div>
+             <!--end partie ghriba-->
+            </div> 
+            
+            
+            <div class="row gx-0">
+             <!--partie fekkas-->
+              <div class="card" id="row_id" >
+                <div class="row ">
+                  <!--image-->
+                    <div class="col-md-4">
+                      <img src="../login/assets/images/fekkas.jpg" class="card-img-top" alt="">
+                    </div>
+                    <!--contenu-->
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <div class="col">
+                              <!--titre-->
+                                <div class="row">
+                                    <h3 class="text-center text-dark mb-4"><span class="text-warning">Fekkas</span></h3>
+                                </div>
+                                <!--information generale-->
+                                <div class="row">
+                                    <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                        <span class="material-icons-sharp text-warning">
+                                            alarm
+                                            </span>
+                                            20min
+                                    </div>
+                                    <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                      <span class="material-icons-sharp text-warning">
+                                        local_fire_department
+                                        </span>
+                                        25min
+                                    </div>
+                                    <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                        <span class="material-icons-sharp text-warning">
+                                            signal_cellular_alt
+                                            </span>
+                                            facile
+                                    </div>
+                                    <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                        <span class="material-icons-sharp text-warning">
+                                            person
+                                            </span>
+                                            15
+                                    </div>
+                                    <!--start rating star-->
+                                    <div class="col-md-4 d-flex justify-content-center align-items-center">
+                                      <div class="ratings-wrapper">
+                                        <div data-productid="39" class="ratings">
+                                          <span data-rating="5">★</span>
+                                          <span data-rating="4">★</span>
+                                          <span data-rating="3">★</span>
+                                          <span data-rating="2">★</span>
+                                          <span data-rating="1">★</span>
+                                        </div>
+                                    </div>
+                                    </div>
+                                    <!--end rating star-->
+                                </div>
+                                <!--ingredient / preparation-->
+                                <div class="row">
+                                  <div class="col-md-12">
+                                    <div class="border p-4">
+                                        <h4 class="text-warning">Ingrédients</h4>
+                                        <ul class="pl-3">
+                                            <li>1 kg de farine</li>
+                                            <li>250 g de sucre</li>
+                                            <li>250 g d'amandes moulues</li>
+                                            <li>150 g de beurre</li>
+                                            <li>6 oeufs</li>
+                                            <li>200 g de raisins secs</li>
+                                            <li>2 cuillères à soupe d'anis</li>
+                                            <li>2 sachets de levure chimique</li>
+                                            <li>10 ml d'eau de fleur d'oranger</li>
+                                            <li>100 g de chocolat râpé</li>
+                                            <li>1 jaune d’oeuf et un sachet de nescafé pour la garniture</li>
+                                        </ul>
+                                        <h4 class="text-warning">Préparation</h4>
+                                        <ol>
+                                            <li>
+                                                Bien mélanger les œufs et le sucre, ajouter le beurre fondu (ou la même quantité d'huile), l'eau de fleur d'oranger, ajouter progressivement la farine tamisée avec la levure, les amandes, le chocolat, les raisins secs et l'anis. On obtient une bonne pâte ferme et facile à modeler.                                  </li>
+                                            <li>
+                                                Faire des boudins de 4 à 5 cm de diamètre, les badigeonner avec le mélange œuf et nescafé, faire un petit décor à la fourchette (des lignes dans tous les sens).                                        
+                                            </li>
+                                            <li>
+                                                Enfourner pendant 12 minutes, une sorte de mi-cuisson, les sortir du four et les laisser bien refroidir.                                        
+                                            </li>
+                                            <li>
+                                                Les couper ensuite en tranches et les remettre au four pour les dorer des deux côtés.
+                                            </li>
+                                        </ol>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="row mt-auto">
+                                    <div class="col-md-12">
+                                       <div class="border p-4 text-right d-flex justify-content-end align-items-center">
+                                          <div class="chef-info">
+                                             <p class="small text-muted">Réalisé par :</p>
+                                             <a  style="text-decoration: none;" href="principale.php"><p class=" h6 text-dark">Chef Moha</p></a>
+                                          </div>
+                                          <img src="../login/assets/images/signature1.png" alt="Signature du chef" class="img-fluid signature ml-3" width="60px" height="80px">
+                                       </div>
+                                    </div>
+                                  </div>
+                            </div>   
+                        </div>   
+                    </div>
+                </div>
+                <!--fin contenu-->
+              </div>
+             <!--end partie fekkas-->
+            </div>  
+
+
+
+            <div class="row gx-0">
+                <!--partie msemen-->
+                 <div class="card" id="row_id" >
+                   <div class="row ">
+                     <!--image-->
+                       <div class="col-md-4">
+                         <img src="../login/assets/images/msemen.jpg" class="card-img-top" alt="">
+                       </div>
+                       <!--contenu-->
+                       <div class="col-md-8">
+                           <div class="card-body">
+                               <div class="col">
+                                 <!--titre-->
+                                   <div class="row">
+                                       <h3 class="text-center text-dark mb-4"><span class="text-warning">Msemen</span></h3>
+                                   </div>
+                                   <!--information generale-->
+                                   <div class="row">
+                                       <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                           <span class="material-icons-sharp text-warning">
+                                               alarm
+                                               </span>
+                                               15min
+                                       </div>
+                                       <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                         <span class="material-icons-sharp text-warning">
+                                           local_fire_department
+                                           </span>
+                                           8min
+                                       </div>
+                                       <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                           <span class="material-icons-sharp text-warning">
+                                               signal_cellular_alt
+                                               </span>
+                                               facile
+                                       </div>
+                                       <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                           <span class="material-icons-sharp text-warning">
+                                               person
+                                               </span>
+                                               4
+                                       </div>
+                                       <!--start rating star-->
+                                       <div class="col-md-4 d-flex justify-content-center align-items-center">
+                                         <div class="ratings-wrapper">
+                                           <div data-productid="39" class="ratings">
+                                             <span data-rating="5">★</span>
+                                             <span data-rating="4">★</span>
+                                             <span data-rating="3">★</span>
+                                             <span data-rating="2">★</span>
+                                             <span data-rating="1">★</span>
+                                           </div>
+                                       </div>
+                                       </div>
+                                       <!--end rating star-->
+                                   </div>
+                                   <!--ingredient / preparation-->
+                                   <div class="row">
+                                     <div class="col-md-12">
+                                       <div class="border p-4">
+                                           <h4 class="text-warning">Ingrédients</h4>
+                                           <ul class="pl-3">
+                                               <li>400 g de farine de blé entier</li>
+                                               <li>200 g de semoule très fine</li>
+                                               <li>eau tiède</li>
+                                               <li>une cuillère à café de sel</li>
+                                               <li>Mélange beurre + huile de Tournesol</li>
+                                           </ul>
+                                           <h4 class="text-warning">Préparation</h4>
+                                           <ol>
+                                               <li>
+                                                    Dans votre robot ou machine à pain, mélanger la farine, la semoule le sel.                                 
+                                                </li>
+                                               <li>
+                                                    Ajouter petit l'eau tiède jusqu'à l’obtention d’une pâte bien souple                                       
+                                               </li>
+                                               <li>
+                                                    Former des petites boules. Laissez reposer 5 minutes.                                       
+                                               </li>
+                                               <li>
+                                                Étaler la pâte, sans la déchirer, rabattre un côté du cercle puis l’autre moitié.
+                                               </li>
+                                               <li>
+                                                Puis les deux autres extrémité pour former un carré, une fois que vous avez tout terminé, bien étalez votre crêpe.
+                                               </li>
+                                               <li>
+                                                Faites chauffer une poêle sur feu moyen, déposer votre crêpe sur la poêle.
+                                               </li>
+                                               <li>
+                                                Rajouter un peu d’huile sur le dessus.
+                                               </li>
+                                               <li>
+                                                Au bout de 4/5 minutes, retournez votre crêpe et laissez à nouveau 4/5 minutes.
+                                               </li>
+                                               <li>
+                                                Tourner la crêpe sur elle même.
+                                               </li>
+                                               <li>
+                                                Servir nature ou avec un mélange beurre miel.
+                                               </li>
+                                           </ol>
+                                       </div>
+                                     </div>
+                                   </div>
+                                   <div class="row mt-auto">
+                                    <div class="col-md-12">
+                                       <div class="border p-4 text-right d-flex justify-content-end align-items-center">
+                                          <div class="chef-info">
+                                             <p class="small text-muted">Réalisé par :</p>
+                                             <a  style="text-decoration: none;" href="principale.php"><p class=" h6 text-dark">Chef Khadija</p></a>
+                                          </div>
+                                          <img src="../login/assets/images/signature1.png" alt="Signature du chef" class="img-fluid signature ml-3" width="60px" height="80px">
+                                       </div>
+                                    </div>
+                                  </div>
+                               </div>   
+                           </div>   
+                       </div>
+                   </div>
+                   <!--fin contenu-->
+                 </div>
+                <!--end partie msemen-->
+            </div> 
+
+            
+
+            <div class="row gx-0">
+                <!--partie sfenj-->
+                 <div class="card"  id="row_id">
+                   <div class="row ">
+                     <!--image-->
+                       <div class="col-md-4">
+                         <img src="../login/assets/images/sfenj.jpg" class="card-img-top" alt="">
+                       </div>
+                       <!--contenu-->
+                       <div class="col-md-8">
+                           <div class="card-body">
+                               <div class="col">
+                                 <!--titre-->
+                                   <div class="row">
+                                       <h3 class="text-center text-dark mb-4"><span class="text-warning">Sfenj</span></h3>
+                                   </div>
+                                   <!--information generale-->
+                                   <div class="row">
+                                       <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                           <span class="material-icons-sharp text-warning">
+                                               alarm
+                                               </span>
+                                               25min
+                                       </div>
+                                       <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                         <span class="material-icons-sharp text-warning">
+                                           local_fire_department
+                                           </span>
+                                           5min
+                                       </div>
+                                       <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                           <span class="material-icons-sharp text-warning">
+                                               signal_cellular_alt
+                                               </span>
+                                               facile
+                                       </div>
+                                       <div class="col-md-2 d-flex justify-content-center align-items-center">
+                                           <span class="material-icons-sharp text-warning">
+                                               person
+                                               </span>
+                                               5
+                                       </div>
+                                       <!--start rating star-->
+                                       <div class="col-md-4 d-flex justify-content-center align-items-center">
+                                         <div class="ratings-wrapper">
+                                           <div data-productid="39" class="ratings">
+                                             <span data-rating="5">★</span>
+                                             <span data-rating="4">★</span>
+                                             <span data-rating="3">★</span>
+                                             <span data-rating="2">★</span>
+                                             <span data-rating="1">★</span>
+                                           </div>
+                                       </div>
+                                       </div>
+                                       <!--end rating star-->
+                                   </div>
+                                   <!--ingredient / preparation-->
+                                   <div class="row">
+                                     <div class="col-md-12">
+                                       <div class="border p-4">
+                                           <h4 class="text-warning">Ingrédients</h4>
+                                           <ul class="pl-3">
+                                               <li>300 g de farine</li>
+                                               <li>150 g de semoule très fine</li>
+                                               <li>400 à 500 ml d'eau tiède</li>
+                                               <li>20 g de levure de boulanger fraîche</li>
+                                               <li>1/2 sachet de levure chimique</li>
+                                               <li>1/2 cuillère à café de sel</li>
+                                               <li>Bain d'huile pour la friture</li>
+                                           </ul>
+                                           <h4 class="text-warning">Préparation</h4>
+                                           <ol>
+                                               <li>
+                                                    Délayer la levure dans un peu d'eau tiède et laisser reposer quelques minutes à l'abri des courants d'airs.
+                                                    <br>
+                                                    La levure doit buller.                                
+                                                </li>
+                                               <li>
+                                                    Dans un grand saladier, mélanger la farine et la semoule fine.
+                                                    <br>
+                                                    Faire un puits et y déposer le sel, la levure chimique ainsi que la levure de boulanger. Mélanger                                      
+                                               </li>
+                                               <li>
+                                                    Verser l'eau petit à petit en amalgamant la pâte.
+                                                    <br>
+                                                    Celle-ci doit être lisse et bien mouillée.
+                                                    <br>
+                                                    Pétrir énergiquement en soulevant la pâte, cela dure environ 20 minutes et doit être vif et ferme.                                       
+                                               </li>
+                                               <li>
+                                                    Couvrir la pâte d'un plastique puis d'un linge épais du genre un plaid.
+                                                    <br>
+                                                    Laisser bien lever environ 3 heures.
+                                                    <br>
+                                                    La pâte doit doubler de volume et buller.
+                                                    <br>
+                                                    La faire tomber en pétrissant encore 10 minutes puis remettre à lever encore 3 heures.
+                                               </li>
+                                               <li>
+                                                    Mettre le bain d'huile à chauffer sans qu'il ne soit fumant.
+                                                    <br>
+                                                    Huiler les mains puis prélever un peu de pâte de la taille d'un œuf, faire un trou en élargissant un peu la pâte.
+                                               </li>
+                                               <li>
+                                                    Plonger dans l'huile, et à l'aide d'un pic à brochette en métal, élargir le trou en donnant des mouvements circulaires.
+                                                    <br>
+                                                    Retourner le sfenj dès qu'il est doré et faire cuire des deux côtés.
+                                                    <br>
+                                                    Égoutter.
+                                               </li>
+                                           </ol>
+                                       </div>
+                                     </div>
+                                   </div>
+                                   <div class="row mt-auto">
+                                    <div class="col-md-12">
+                                       <div class="border p-4 text-right d-flex justify-content-end align-items-center">
+                                          <div class="chef-info">
+                                             <p class="small text-muted">Réalisé par :</p>
+                                             <a  style="text-decoration: none;" href="principale.php"><p class=" h6 text-dark">Chef Choumicha</p></a>
+                                          </div>
+                                          <img src="../login/assets/images/signature1.png" alt="Signature du chef" class="img-fluid signature ml-3" width="60px" height="80px">
+                                       </div>
+                                    </div>
+                                  </div>
+                               </div>   
+                           </div>   
+                       </div>
+                   </div>
+                   <!--fin contenu-->
+                 </div>
+                <!--end partie sfenj-->
+            </div>
+        </div>
+
+        <div class="col">
+             
+            <!--debut partie astuce baghrir-->
+            
+              <h1 class="text-center text-dark mb-4 text-shadow-dark" style="font-family: 'Great Vibes', cursive; font-size: 100px; text-shadow: 2px 5px 15px #ffc107;"><span class="text-warning"> Astuces</span></h1>
+              
+              <div class="row gx-0 d-flex justify-content-center align-items-center">
+                <div class="card justify-content-center " id="card">
+                  <img class="card-imgg" src="../login/assets/images/baghrir_astuce.jpg" alt="">
+                  <div class="card-bodyy">
+                    <h1 class="card-title">Crèpe marocaine milles trous</h1>
+                    <ul>
+                      <li>Utilisez de la semoule fine</li>
+                      <li>Contrôlez la température de la poêle</li>
+                      <li>Utilisez une louche pour verser la pâte</li>
+                      <li>Servez les baghrirs chauds </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+                    
+                    <!--fin partie astuce-->
+                    <!--debut partie artuce ghriba -->
+                    <br>
+              <div class="row gx-0 d-flex justify-content-center align-items-center">
+                    <div class="card justify-content-center " id="card">
+                      <img class="card-imgg" src="../login/assets/images/ghrib_astuce.jpg" alt="">
+                      <div class="card-bodyy">
+                        <h1 class="card-title">Ghriba aux noix de coco</h1>
+                        <ul>
+                          <li>Toastez la semoule</li>
+                          <li>Utilisez du beurre fondu</li>
+                          <li>Ajoutez des saveurs supplémentaires</li>
+                          <li>Ne mélangez pas trop la pâte</li>
+                        </ul>
+                      </div>
+                    </div>
+              </div>
+                    <!--fin partie astuce-->
+                    <!--debut partie astuce fekkas-->
+                    <br>
+              <div class="row gx-0 d-flex justify-content-center align-items-center"> 
+                    <div class="card justify-content-center" id="card">
+                      <img class="card-imgg" src="../login/assets/images/fekkas_astuce.png" alt="">
+                      <div class="card-bodyy">
+                        <h1 class="card-title">Fekkas</h1>
+                        <ul>
+                          <li>Toastez les fruits secs et les noix</li>
+                          <li>Ajoutez des épices et des arômes</li>
+                          <li>Refroidissez complètement avant de couper </li>
+                          <li>Conservez-les correctement</li>
+                        </ul>
+                      </div>
+                    </div>
+                    <!--fin partie astuce-->
+              </div>
+              <!--debut partie astuce Msemen-->
+              <br>
+              <div class="row gx-0 d-flex justify-content-center align-items-center">
+                    <div class="card justify-content-center" id="card">
+                      <img class="card-imgg" src="../login/assets/images/msemen_astuce.jpg" alt="">
+                      <div class="card-bodyy">
+                        <h1 class="card-title">Msemen</h1>
+                        <ul>
+                          <li>Préparez une pâte lisse</li>
+                          <li>Laissez reposer la pâte </li>
+                          <li>Utilisez de la semoule fine</li>
+                          <li>Cuisez des deux côtés</li>
+                        </ul>
+                      </div>
+                    </div>
+              </div>    
+                    <!--fin partie astuce-->
+                    
+                    <!--debut partie astuce Sfenj-->
+                    <br>
+              <div class="row gx-0 d-flex justify-content-center align-items-center"> 
+                    <div class="card justify-content-center" id="card">
+                      <img class="card-imgg" src="../login/assets/images/sfenj_astuce.jpg" alt="">
+                      <div class="card-bodyy">
+                        <h1 class="card-title">Sfenj</h1>
+                        <ul>
+                          <li>Mélangez les ingrédients avec soin</li>
+                          <li>Chauffez l'huile à la bonne température</li>
+                          <li>Façonnez les sfenj</li>
+                          <li>Égouttez et saupoudrez de sucre  </li>
+                        </ul>
+                      </div>
+                    </div>
+              </div>     
+                    <!--fin partie astuce-->
+
+    </div>
+  </section>
+  <!--end historique-->
+<!--footer-->
+<footer>
+  <footer class="footer-distributed">
+
+      <div class="footer-left">
+          <h3>Morrocan F<span>oo</span>d</h3>
+
+          <p class="footer-links">
+              <a href="#">Menu</a>
+              |
+              <a href="#">A propos</a>
+              |
+              <a href="#">Recettes</a>
+              |
+              <a href="#">Blog</a>
+          </p>
+
+          <p class="footer-company-name">Copyright © 2023 <strong>Morrocan Food</strong> All rights reserved</p>
+      </div>
+
+      <div class="footer-center">
+          <div>
+              <i class="fa fa-map-marker"></i>
+              <p><span>Casablanca Anfa 20000 </span>
+                  Route Jorf Al asfar</p>
+          </div>
+
+          <div>
+              <i class="fa fa-phone"></i>
+              <p>FIX: 0535458890</p>
+          </div>
+          <div>
+              <i class="fa fa-envelope"></i>
+              <p><a href="anibadoha9@gmail.com">EMR2023@gmail.com</a></p>
+          </div>
+      </div>
+      <div class="footer-right">
+          <p class="footer-company-about">
+              <span>A propos du site</span>
+              <strong>Morrocan Food</strong> propose une expérience culinaire unique pour tous 
+              les amateurs de cuisine marocaine.
+          </p>
+          <div class="footer-icons">
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+      </div>
+</footer>
+
+
+  
+  <script>
+    $(document).ready(function(){
+      $('.counter').counterUp({
+        delay: 10,
+        time: 1200
+      });
+    });
+    </script>  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <script src="entree.js"></script>
+</body>
+</html>
