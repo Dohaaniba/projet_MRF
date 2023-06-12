@@ -1,5 +1,4 @@
-## Ptojet : MRF
-## By : DAHMANI OUMAYMA - BENDALI MAANAL - ANIBA DOHA
+## Projet : MRF
 #BUT du projet :
 Le but de notre projet est double. Tout d'abord, nous souhaitons faire connaître la cuisine marocaine aux étrangers, ainsi qu'aux Marocains qui souhaitent apprendre à cuisiner des plats marocains authentiques. Notre plateforme fournira des recettes détaillées, des conseils culinaires et des astuces pour reproduire les saveurs et les techniques traditionnelles de la cuisine marocaine.
 
