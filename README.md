@@ -1,11 +1,16 @@
 ## Projet : MRF
+#TEAM :
+ANIBA Doha
+BENDALI Manal
+DAHMANI Oumaima
+
 #BUT du projet :
 Le but de notre projet est double. Tout d'abord, nous souhaitons faire connaître la cuisine marocaine aux étrangers, ainsi qu'aux Marocains qui souhaitent apprendre à cuisiner des plats marocains authentiques. Notre plateforme fournira des recettes détaillées, des conseils culinaires et des astuces pour reproduire les saveurs et les techniques traditionnelles de la cuisine marocaine.
 
 Ensuite, nous cherchons à encourager la visite du Maroc en collaborant avec des restaurants locaux. Nous proposons un formulaire permettant aux restaurants de partager l'une de leurs recettes emblématiques. En échange, nous assurerons la promotion de leur restaurant en mettant en avant leur recette sur notre plateforme et nos canaux de communication. Les restaurants pourront ainsi bénéficier d'une visibilité accrue et attirer de nouveaux clients, tout en mettant en valeur la richesse de la cuisine marocaine.
 
 Notre modèle commercial repose sur un partenariat avec les restaurants participants. Ils nous rémunéreront pour les services de promotion et de publicité que nous leur offrirons. Grâce à cette collaboration, nous espérons contribuer à la promotion de la gastronomie marocaine, encourager le tourisme culinaire et offrir une expérience authentique aux visiteurs du Maroc.
-teams : hahahha
+
 ![page1](https://github.com/Dohaaniba/projet_devv_web/assets/132018368/e5d22a1b-0975-44d5-a651-0dba5ab815f0)
 ![page2](https://github.com/Dohaaniba/projet_devv_web/assets/132018368/a85a5d55-e14d-4b9b-9113-ac8296f55c55)
 ![page3](https://github.com/Dohaaniba/projet_devv_web/assets/132018368/21397160-d01b-475e-bfc4-85fbb09356de)
